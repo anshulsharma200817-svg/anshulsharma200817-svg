@@ -6,7 +6,7 @@
 
 <br />
 
-## 🌌 Welcome, Hunter!
+## 🌌 Welcome, Programmer!
 I am **Anshul Sharma**, an S-Rank software developer and machine learning practitioner. 
 I specialize in building intelligent applications, starting from custom machine learning classification pipelines 
 and metaheuristic optimizers to immersive, gamified discipline platforms and comprehensive Astro-based engineering applications.
@@ -27,7 +27,7 @@ and distilling them into robust, clean, and highly user-friendly digital systems
     <tr>
       <!-- Column 1: Status Card -->
       <td align="center" valign="top" width="460">
-        <img src="assets/stats.svg" width="450" alt="The System - Hunter Status Card" />
+        <img src="assets/stats.svg" width="450" alt="The System - Programmer Status Card" />
       </td>
       <!-- Column Spacing -->
       <td width="20"></td>
@@ -101,7 +101,7 @@ and distilling them into robust, clean, and highly user-friendly digital systems
 <hr style="border: 1px solid #1f2937;" />
 <br />
 
-## 📊 Hunter Statistics (GitHub Metrics)
+## 📊 Programmer Statistics (GitHub Metrics)
 
 <div align="center">
   <table border="0" cellpadding="0" cellspacing="0">

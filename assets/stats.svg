@@ -140,7 +140,7 @@
       <!-- System Title -->
       <text x="0" y="15" font-size="18" font-weight="800" fill="#f1f5f9" letter-spacing="2">INFO: STATUS</text>
       <!-- Subtitle -->
-      <text x="0" y="32" font-size="10" font-weight="600" fill="#00f2fe" class="mono-text" letter-spacing="1">THE SYSTEM: HUNTER REGISTRY</text>
+      <text x="0" y="32" font-size="10" font-weight="600" fill="#00f2fe" class="mono-text" letter-spacing="1">THE SYSTEM: PROGRAMMER REGISTRY</text>
       
       <!-- Tech bracket corner -->
       <path d="M 400 0 L 420 0 L 420 20" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.8" />
