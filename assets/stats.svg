@@ -1,0 +1,273 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 380" width="100%" height="100%">
+  <defs>
+    <!-- Fonts -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Fira+Code:wght@400;500&amp;display=swap');
+      
+      .status-card {
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      
+      .mono-text {
+        font-family: 'Fira Code', monospace;
+      }
+
+      /* Glow Effects */
+      .glow-neon-blue {
+        filter: drop-shadow(0 0 4px #00f2fe) drop-shadow(0 0 8px rgba(0, 242, 254, 0.3));
+      }
+      .glow-neon-purple {
+        filter: drop-shadow(0 0 4px #a855f7) drop-shadow(0 0 8px rgba(168, 85, 247, 0.3));
+      }
+      .glow-gold {
+        filter: drop-shadow(0 0 4px #fbbf24) drop-shadow(0 0 8px rgba(251, 191, 36, 0.3));
+      }
+
+      /* Bar Load Animations */
+      @keyframes load-bar-int {
+        from { width: 0px; }
+        to { width: 188px; } /* 94% of 200px */
+      }
+      @keyframes load-bar-str {
+        from { width: 0px; }
+        to { width: 192px; } /* 96% of 200px */
+      }
+      @keyframes load-bar-sen {
+        from { width: 0px; }
+        to { width: 184px; } /* 92% of 200px */
+      }
+      @keyframes load-bar-agi {
+        from { width: 0px; }
+        to { width: 180px; } /* 90% of 200px */
+      }
+      @keyframes load-bar-vit {
+        from { width: 0px; }
+        to { width: 178px; } /* 89% of 200px */
+      }
+      @keyframes load-bar-xp {
+        from { width: 0px; }
+        to { width: 374px; } /* 98.4% of 380px */
+      }
+
+      /* Scanner effect */
+      @keyframes scan-animation {
+        0% { transform: translateY(0); opacity: 0; }
+        10% { opacity: 0.7; }
+        90% { opacity: 0.7; }
+        100% { transform: translateY(374px); opacity: 0; }
+      }
+
+      /* Pulsing animations */
+      @keyframes pulse-light {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+      @keyframes pulse-level {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+
+      /* Classes */
+      .bar-int { animation: load-bar-int 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      .bar-str { animation: load-bar-str 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      .bar-sen { animation: load-bar-sen 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      .bar-agi { animation: load-bar-agi 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      .bar-vit { animation: load-bar-vit 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      .bar-xp { animation: load-bar-xp 2.2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      
+      .scanner-line { animation: scan-animation 6s linear infinite; }
+      .pulse-item { animation: pulse-light 2s ease-in-out infinite; }
+      .pulse-lvl { animation: pulse-level 2s ease-in-out infinite; transform-origin: 75px 125px; }
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0d16" />
+      <stop offset="100%" stop-color="#111625" />
+    </linearGradient>
+
+    <linearGradient id="bar-gradient-int" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="bar-gradient-str" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bfdbfe" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="bar-gradient-sen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+    <linearGradient id="bar-gradient-agi" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="bar-gradient-vit" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="xp-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="gold-text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+
+    <!-- Scanner Glow Filter -->
+    <filter id="scan-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Card Body -->
+  <rect width="460" height="380" rx="12" fill="url(#card-bg)" stroke="#1f2937" stroke-width="1.5" />
+  
+  <!-- Outer glowing border line -->
+  <rect x="5" y="5" width="450" height="370" rx="9" fill="none" stroke="#2563eb" stroke-width="1.2" opacity="0.3" />
+
+  <!-- Scanning HUD Line -->
+  <line x1="6" y1="6" x2="454" y2="6" stroke="#00f2fe" stroke-width="2" class="scanner-line" filter="url(#scan-glow)" />
+
+  <!-- Content Group -->
+  <g class="status-card">
+    
+    <!-- Top Bar / Window Header -->
+    <g transform="translate(20, 25)">
+      <!-- System Title -->
+      <text x="0" y="15" font-size="18" font-weight="800" fill="#f1f5f9" letter-spacing="2">INFO: STATUS</text>
+      <!-- Subtitle -->
+      <text x="0" y="32" font-size="10" font-weight="600" fill="#00f2fe" class="mono-text" letter-spacing="1">THE SYSTEM: HUNTER REGISTRY</text>
+      
+      <!-- Tech bracket corner -->
+      <path d="M 400 0 L 420 0 L 420 20" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.8" />
+    </g>
+
+    <!-- Divider Line -->
+    <line x1="20" y1="75" x2="440" y2="75" stroke="#1f2937" stroke-width="1" />
+
+    <!-- Left Section: Avatar / Emblem & Level -->
+    <g transform="translate(20, 90)">
+      <!-- Cyber Box for Avatar -->
+      <rect width="110" height="110" rx="8" fill="#0b0f19" stroke="#1e293b" stroke-width="1.5" />
+      <rect x="4" y="4" width="102" height="102" rx="6" fill="none" stroke="#2563eb" stroke-width="1" opacity="0.2" />
+
+      <!-- Glowing Cyber Crest/Portal Graphic inside Box -->
+      <g transform="translate(55, 55)" class="glow-neon-purple">
+        <!-- Magic Circle base -->
+        <circle cx="0" cy="0" r="32" fill="none" stroke="#a855f7" stroke-width="1" stroke-dasharray="4 4" class="pulse-item" />
+        <circle cx="0" cy="0" r="26" fill="none" stroke="#c084fc" stroke-width="1.5" />
+        <polygon points="0,-22 19,11 -19,11" fill="none" stroke="#a855f7" stroke-width="1.2" />
+        <polygon points="0,22 19,-11 -19,-11" fill="none" stroke="#a855f7" stroke-width="1.2" />
+        <circle cx="0" cy="0" r="6" fill="#c084fc" class="pulse-item" />
+      </g>
+
+      <!-- Level Text inside Crest area -->
+      <g class="pulse-lvl">
+        <text x="55" y="125" font-size="12" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="1">HUNTER LEVEL</text>
+        <text x="55" y="152" font-size="28" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-blue">99</text>
+      </g>
+    </g>
+
+    <!-- Right Section: General Stats & Info -->
+    <g transform="translate(150, 90)">
+      <!-- Name -->
+      <text x="0" y="18" font-size="14" font-weight="500" fill="#64748b">NAME:</text>
+      <text x="65" y="18" font-size="15" font-weight="700" fill="#f8fafc">Anshul Sharma</text>
+
+      <!-- Rank -->
+      <text x="0" y="40" font-size="14" font-weight="500" fill="#64748b">RANK:</text>
+      <text x="65" y="42" font-size="17" font-weight="800" fill="url(#gold-text-grad)" class="glow-gold" letter-spacing="1">S-RANK (MONARCH)</text>
+
+      <!-- Class -->
+      <text x="0" y="62" font-size="14" font-weight="500" fill="#64748b">CLASS:</text>
+      <text x="65" y="62" font-size="14" font-weight="600" fill="#00f2fe">Full-Stack Architect</text>
+
+      <!-- Special Guild/Affiliation -->
+      <text x="0" y="84" font-size="14" font-weight="500" fill="#64748b">GUILD:</text>
+      <text x="65" y="84" font-size="14" font-weight="600" fill="#a855f7">Cybercell Intelligence</text>
+
+      <!-- Status Indicator -->
+      <text x="0" y="106" font-size="14" font-weight="500" fill="#64748b">STATUS:</text>
+      <text x="65" y="106" font-size="12" font-weight="700" fill="#10b981" class="mono-text">[ ACTIVE / ARISE ]</text>
+    </g>
+
+    <!-- Divider Line -->
+    <line x1="20" y1="215" x2="440" y2="215" stroke="#1f2937" stroke-width="1" />
+
+    <!-- Bottom Section: Attributes & Progress Bars -->
+    <g transform="translate(20, 222)">
+      
+      <!-- Attribute 1: INT (AI / ML) -->
+      <g transform="translate(0, 10)">
+        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">INT [AI &amp; ML &amp; NLP]</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#00f2fe" class="mono-text">94</text>
+        
+        <!-- Bar BG -->
+        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <!-- Loading Bar -->
+        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-int)" class="bar-int" />
+      </g>
+
+      <!-- Attribute 2: STR (Backend / DB) -->
+      <g transform="translate(0, 30)">
+        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">STR [Backend / SQL]</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#3b82f6" class="mono-text">96</text>
+        
+        <!-- Bar BG -->
+        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <!-- Loading Bar -->
+        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-str)" class="bar-str" />
+      </g>
+
+      <!-- Attribute 3: SEN (Frontend / UI) -->
+      <g transform="translate(0, 50)">
+        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">SEN [Frontend / UX]</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#ec4899" class="mono-text">92</text>
+        
+        <!-- Bar BG -->
+        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <!-- Loading Bar -->
+        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-sen)" class="bar-sen" />
+      </g>
+
+      <!-- Attribute 4: AGI (Systems / Opt) -->
+      <g transform="translate(0, 70)">
+        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">AGI [Systems / Speed]</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#fbbf24" class="mono-text">90</text>
+        
+        <!-- Bar BG -->
+        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <!-- Loading Bar -->
+        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-agi)" class="bar-agi" />
+      </g>
+
+      <!-- Attribute 5: VIT (Algorithms) -->
+      <g transform="translate(0, 90)">
+        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">VIT [DSA &amp; Logic]</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#10b981" class="mono-text">89</text>
+        
+        <!-- Bar BG -->
+        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <!-- Loading Bar -->
+        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-vit)" class="bar-vit" />
+      </g>
+
+      <!-- XP Section -->
+      <g transform="translate(0, 114)">
+        <!-- XP text -->
+        <text x="0" y="11" font-size="9" font-weight="700" fill="#64748b" class="mono-text" letter-spacing="0.5">XP: 98,450 / 100,000 (98.45%)</text>
+        
+        <!-- XP Bar BG -->
+        <rect x="0" y="15" width="420" height="6" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5" />
+        <!-- XP Bar Loading -->
+        <rect x="1" y="16" height="4" rx="1.5" fill="url(#xp-gradient)" class="bar-xp" />
+      </g>
+      
+    </g>
+
+  </g>
+</svg>

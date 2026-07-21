@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 220" width="100%" height="100%">
+  <defs>
+    <!-- Fonts -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&amp;family=Fira+Code:wght@400;500&amp;display=swap');
+      
+      .main-container {
+        font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+      
+      .mono-text {
+        font-family: 'Fira Code', monospace;
+      }
+
+      /* Glow Filters */
+      .glow-cyan {
+        filter: drop-shadow(0 0 4px #06b6d4) drop-shadow(0 0 12px rgba(6, 182, 212, 0.4));
+      }
+      .glow-purple {
+        filter: drop-shadow(0 0 4px #a855f7) drop-shadow(0 0 12px rgba(168, 85, 247, 0.4));
+      }
+      .glow-border {
+        filter: drop-shadow(0 0 8px #6366f1);
+      }
+
+      /* Animations */
+      @keyframes pulse {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.9; }
+      }
+
+      @keyframes rotate-clockwise {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes rotate-counter {
+        0% { transform: rotate(360deg); }
+        100% { transform: rotate(0deg); }
+      }
+
+      @keyframes hue-shift {
+        0% { filter: hue-rotate(0deg) drop-shadow(0 0 4px #6366f1); }
+        100% { filter: hue-rotate(360deg) drop-shadow(0 0 4px #6366f1); }
+      }
+
+      /* Roles cycle animation */
+      @keyframes role-cycle-1 {
+        0%, 28% { opacity: 1; transform: translateY(0); }
+        33%, 95% { opacity: 0; transform: translateY(-10px); }
+        100% { opacity: 0; transform: translateY(10px); }
+      }
+
+      @keyframes role-cycle-2 {
+        0%, 33% { opacity: 0; transform: translateY(10px); }
+        38%, 61% { opacity: 1; transform: translateY(0); }
+        66%, 100% { opacity: 0; transform: translateY(-10px); }
+      }
+
+      @keyframes role-cycle-3 {
+        0%, 66% { opacity: 0; transform: translateY(10px); }
+        71%, 94% { opacity: 1; transform: translateY(0); }
+        99%, 100% { opacity: 0; transform: translateY(-10px); }
+      }
+
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
+
+      @keyframes floating-particle {
+        0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+        50% { transform: translateY(-8px) translateX(5px); opacity: 0.7; }
+      }
+
+      /* Classes applying animations */
+      .anim-pulse { animation: pulse 3s ease-in-out infinite; }
+      .anim-rotate-cw { animation: rotate-clockwise 20s linear infinite; transform-origin: 700px 110px; }
+      .anim-rotate-ccw { animation: rotate-counter 15s linear infinite; transform-origin: 700px 110px; }
+      .anim-border { animation: hue-shift 10s linear infinite; }
+      
+      .role-1 { animation: role-cycle-1 12s infinite; }
+      .role-2 { animation: role-cycle-2 12s infinite; }
+      .role-3 { animation: role-cycle-3 12s infinite; }
+      
+      .cursor { animation: blink 0.8s infinite; }
+      
+      .particle-1 { animation: floating-particle 4s ease-in-out infinite; }
+      .particle-2 { animation: floating-particle 6s ease-in-out infinite 1s; }
+      .particle-3 { animation: floating-particle 5s ease-in-out infinite 2s; }
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05070f" />
+      <stop offset="100%" stop-color="#0b1120" />
+    </linearGradient>
+
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="35%" stop-color="#8b5cf6" />
+      <stop offset="70%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+    
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="850" height="220" rx="14" fill="url(#bg-grad)" />
+  <rect width="850" height="220" rx="14" fill="url(#grid)" />
+
+  <!-- Animated Border -->
+  <rect x="3" y="3" width="844" height="214" rx="11" fill="none" stroke="url(#border-grad)" stroke-width="2.5" class="anim-border" />
+
+  <!-- Floating Ambient Particles -->
+  <circle cx="150" cy="50" r="1.5" fill="#00f2fe" class="particle-1" />
+  <circle cx="280" cy="180" r="2" fill="#d946ef" class="particle-2" />
+  <circle cx="450" cy="80" r="1" fill="#8b5cf6" class="particle-3" />
+  <circle cx="80" cy="140" r="2" fill="#3b82f6" class="particle-1" />
+
+  <!-- Group Wrapper for Outfit Font -->
+  <g class="main-container">
+    <!-- Cyber HUD Bracket -->
+    <path d="M 40 45 L 30 45 L 30 175 L 40 175" fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.6" />
+    <path d="M 30 110 L 25 110" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.8" />
+    
+    <!-- Title / Name -->
+    <text x="50" y="85" font-size="38" font-weight="800" fill="url(#name-grad)" letter-spacing="1" class="glow-cyan">ANSHUL SHARMA</text>
+    
+    <!-- Animated Role text -->
+    <!-- Position all roles at the same coordinates so they overlay. Keyframes handle display timing. -->
+    <g transform="translate(50, 122)">
+      <!-- Role 1 -->
+      <g class="role-1">
+        <text x="0" y="0" font-size="20" font-weight="600" fill="#f1f5f9" letter-spacing="0.5">
+          Full-Stack Developer
+        </text>
+      </g>
+      
+      <!-- Role 2 -->
+      <g class="role-2">
+        <text x="0" y="0" font-size="20" font-weight="600" fill="#38bdf8" letter-spacing="0.5">
+          Machine Learning &amp; NLP Engineer
+        </text>
+      </g>
+      
+      <!-- Role 3 -->
+      <g class="role-3">
+        <text x="0" y="0" font-size="20" font-weight="600" fill="#c084fc" letter-spacing="0.5">
+          Systems Architect &amp; Creator
+        </text>
+      </g>
+      
+      <!-- Blinking Cursor (Offset dynamically using spacing or just draw after text) -->
+      <!-- We can simulate it by rendering it at an average position or just at the end of the longest role. -->
+      <!-- Let's put a subtle blinking prompt character at the beginning of the line instead! -->
+    </g>
+
+    <!-- Cyber prompt symbol -->
+    <text x="50" y="120" font-size="20" font-weight="600" fill="#3b82f6" class="mono-text cursor">&gt;</text>
+    <!-- Shift the roles right to accommodate the prompt -->
+    <g transform="translate(72, 122)">
+      <!-- Overlay roles with prompt shift -->
+      <text x="0" y="0" font-size="18" font-weight="600" fill="#f1f5f9" class="role-1">Full-Stack Developer</text>
+      <text x="0" y="0" font-size="18" font-weight="600" fill="#00f2fe" class="role-2">Machine Learning &amp; NLP Engineer</text>
+      <text x="0" y="0" font-size="18" font-weight="600" fill="#d946ef" class="role-3">Systems &amp; Optimization Specialist</text>
+    </g>
+
+    <!-- Skill Tags / Status Badges -->
+    <g transform="translate(50, 168)" font-size="12" font-weight="600" letter-spacing="1">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="75" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="37.5" y="15" fill="#94a3b8" text-anchor="middle">PYTHON</text>
+
+      <!-- Tag 2 -->
+      <rect x="85" y="0" width="70" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="120" y="15" fill="#94a3b8" text-anchor="middle">NEXT.JS</text>
+
+      <!-- Tag 3 -->
+      <rect x="165" y="0" width="80" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="205" y="15" fill="#94a3b8" text-anchor="middle">PYTORCH</text>
+
+      <!-- Tag 4 -->
+      <rect x="255" y="0" width="75" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="292.5" y="15" fill="#94a3b8" text-anchor="middle">DJANGO</text>
+
+      <!-- Tag 5 -->
+      <rect x="340" y="0" width="60" height="22" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="370" y="15" fill="#94a3b8" text-anchor="middle">ASTRO</text>
+    </g>
+  </g>
+
+  <!-- Right Side Cybernetic Sphere Complex -->
+  <!-- Center is at X=700, Y=110 -->
+  <g class="glow-cyan">
+    <!-- Outer dashed tech ring -->
+    <circle cx="700" cy="110" r="75" fill="none" stroke="#0891b2" stroke-width="1.5" stroke-dasharray="10 15 30 10" class="anim-rotate-cw" opacity="0.6" />
+    
+    <!-- Middle ring with opposite rotation -->
+    <circle cx="700" cy="110" r="60" fill="none" stroke="#a855f7" stroke-width="2" stroke-dasharray="40 8 10 8" class="anim-rotate-ccw glow-purple" opacity="0.7" />
+    
+    <!-- Thin solid divider ring -->
+    <circle cx="700" cy="110" r="48" fill="none" stroke="#3b82f6" stroke-width="0.8" opacity="0.4" />
+
+    <!-- Inner pulsing core -->
+    <circle cx="700" cy="110" r="32" fill="#0c4a6e" fill-opacity="0.3" stroke="#00f2fe" stroke-width="2.5" class="anim-pulse" />
+    
+    <!-- Central S-Rank Core Emblem or Symbol -->
+    <path d="M 693 103 L 707 103 L 693 117 L 707 117" fill="none" stroke="#00f2fe" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="anim-pulse" />
+    
+    <!-- Tech dots around the sphere -->
+    <circle cx="700" cy="35" r="3" fill="#00f2fe" class="anim-pulse" />
+    <circle cx="700" cy="185" r="3" fill="#a855f7" class="anim-pulse" />
+    <circle cx="625" cy="110" r="3" fill="#3b82f6" class="anim-pulse" />
+    <circle cx="775" cy="110" r="3" fill="#ec4899" class="anim-pulse" />
+  </g>
+</svg>
