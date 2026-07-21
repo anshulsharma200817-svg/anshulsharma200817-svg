@@ -121,37 +121,90 @@ graph TD
 * **Core Technology:** Python (Scikit-Learn), Streamlit frontend, SHAP Explainability.
 * **Key Achievement:** Combines 7 bio-inspired metaheuristics (GA, HHO, SMA, AO) with contribution weights to produce feature subsets that are **2.15× more stable** than baseline feature selectors.
 
-### 🧠 Personalized Study Planner & Analytics Platform
-> **Field:** Full-Stack Systems & Database Architecture
-* **Description:** A full-stack study planning and tracking platform designed to organize academic workloads, monitor progress, manage schedules, and render custom study performance charts.
-* **Core Technology:** Next.js (React/TypeScript), Django REST Framework (Python), PostgreSQL Database, Google OAuth & JWT Authentication, Recharts Analytics.
-* **Architecture Diagram:**
+### 🧠 AI-Powered Personalized Study Planner
+> **Field:** AI Systems Architecture & Full-Stack Engineering
+* **Description:** A full-stack study planning platform featuring an **AI Orchestration Core** and a **Dual Routing Engine** designed to parse syllabus documents, dynamically retrieve contextual data via RAG, and route queries based on execution complexity.
+* **Core Technology:** Next.js (React/TypeScript), Django REST Framework (Python), PostgreSQL, AI Orchestrator Core (RAG & LLM Router), Recharts Analytics.
+* **AI Orchestration & Dual Routing Architecture:**
 
 ```mermaid
 graph TD
-    %% Node Definitions
+    %% Entry
     User([👤 User])
     Frontend[💻 Next.js Frontend]
-    Auth{🔑 REST / JWT and Google OAuth}
+    Auth{🔑 REST/JWT Authentication}
     API[⚙️ Django REST API]
+
+    %% Dual Routing Engine
+    subgraph Routing[🔀 Dual Routing Engine]
+        Decision{Query Analyzer}
+        CachePath[⚡ Fast-Path: Cached / Simple Query]
+        AIPath[🧠 AI-Path: Dynamic Generation]
+    end
+
+    %% Storage / Database Layer
     DB[(🗄️ PostgreSQL Database)]
-    Analytics[📈 Recharts Analytics and Reports]
 
-    %% Flow Layout
-    User -->|Interacts| Frontend
+    %% AI Orchestration Layer
+    subgraph Orchestrator[🧠 AI Orchestration Layer]
+        SyllabusParser[📝 Document / Syllabus Parser]
+        RAG[📚 RAG Vector Store Retrieval]
+        PromptCompiler[🧩 Contextual Prompt Compiler]
+        
+        subgraph LLMRouter[🤖 Multi-Model LLM Router]
+            Flash[⚡ Gemini Flash - Basic Explanation / Chat]
+            Pro[🧠 Gemini Pro - Study Plan / Quiz Gen]
+        end
+    end
+
+    %% Outputs
+    StudyPlan[📝 Study Plan Generation]
+    Analytics[📈 Recharts Analytics and Charts]
+    Quizzes[✏️ Auto-Generated Quizzes]
+
+    %% Connections
+    User -->|Interacts / Uploads| Frontend
     Frontend -->|Authenticate| Auth
-    Auth -->|Authorize API Calls| API
-    API -->|Read / Write State| DB
-    DB -->|Analyze Progress| Analytics
-    Analytics -->|Visualize| Frontend
+    Auth -->|API Call| API
+    
+    %% Dual Routing Flow
+    API --> Decision
+    Decision -->|Low Complexity| CachePath
+    Decision -->|High Complexity| AIPath
+    
+    %% Paths
+    CachePath -->|Lookup| DB
+    DB -->|Return Static Data| Frontend
+    
+    AIPath --> SyllabusParser
+    SyllabusParser --> RAG
+    RAG --> PromptCompiler
+    PromptCompiler --> LLMRouter
+    
+    %% LLM Out
+    Flash --> StudyPlan
+    Pro --> StudyPlan
+    StudyPlan --> Analytics
+    StudyPlan --> Quizzes
+    Analytics -->|Dynamic Update| Frontend
+    Quizzes -->|Dynamic Update| Frontend
 
-    %% Node Custom Styles (Matching GitHub Dark Mode)
+    %% Styles
     style User fill:#3b82f6,stroke:#2563eb,stroke-width:1.5px,color:#fff
     style Frontend fill:#1e293b,stroke:#3b82f6,stroke-width:1.5px,color:#38bdf8
     style Auth fill:#0f172a,stroke:#10b981,stroke-width:1.5px,color:#34d399
     style API fill:#1e1b4b,stroke:#8b5cf6,stroke-width:1.5px,color:#c084fc
     style DB fill:#0f172a,stroke:#334155,stroke-width:1px,color:#94a3b8
+    
+    style Routing fill:#111c24,stroke:#0284c7,stroke-width:2px,color:#38bdf8
+    style Orchestrator fill:#24112e,stroke:#d946ef,stroke-width:2px,color:#f472b6
+    
+    style Flash fill:#0f172a,stroke:#10b981,stroke-width:1.5px,color:#34d399
+    style Pro fill:#0f172a,stroke:#a855f7,stroke-width:1.5px,color:#a78bfa
+    
+    style StudyPlan fill:#1c1917,stroke:#ca8a04,stroke-width:1.2px,color:#fde047
     style Analytics fill:#111827,stroke:#10b981,stroke-width:2px,color:#34d399
+    style Quizzes fill:#111827,stroke:#ec4899,stroke-width:2px,color:#f472b6
 ```
 
 <br />
