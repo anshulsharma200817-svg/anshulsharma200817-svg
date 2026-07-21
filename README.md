@@ -6,31 +6,36 @@
 
 <br />
 
+## 🌌 Welcome, Hunter!
+I am **Anshul Sharma**, an S-Rank software developer and machine learning practitioner. 
+I specialize in building intelligent applications, starting from custom machine learning classification pipelines 
+and metaheuristic optimizers to immersive, gamified discipline platforms and comprehensive Astro-based engineering applications.
+
+I thrive on taking complex engineering challenges (like building secure, compliant intelligence software for law enforcement) 
+and distilling them into robust, clean, and highly user-friendly digital systems.
+
+#### 🎯 Current Active Quests:
+* 🛡️ **Threat Detection:** Advancing real-time NLP classification models for dark-social analysis.
+* ⚡ **Performance Tuning:** Optimizing relational database architectures and background workers.
+* 🎨 **Creative Interfaces:** Designing micro-animations and browser audio synthesizers (Web Audio API).
+
+<br />
+
 <div align="center">
+  <h3>⚡ System Dashboard</h3>
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <!-- Status Card -->
+      <!-- Column 1: Status Card -->
       <td align="center" valign="top" width="460">
         <img src="assets/stats.svg" width="450" alt="The System - Hunter Status Card" />
       </td>
-      <!-- Bio / Greeting -->
-      <td valign="top" style="padding-left: 20px; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
-        <h3>🌌 Welcome, Hunter!</h3>
-        <p>
-          I am <strong>Anshul Sharma</strong>, an S-Rank software developer and machine learning practitioner. 
-          I specialize in building intelligent applications, starting from custom machine learning classification pipelines 
-          and metaheuristic optimizers to immersive, gamified discipline platforms and comprehensive Astro-based engineering applications.
-        </p>
-        <p>
-          I thrive on taking complex engineering challenges (like building secure, compliant intelligence software for law enforcement) 
-          and distilling them into robust, clean, and highly user-friendly digital systems.
-        </p>
-        <h4>🎯 Current Active Quests:</h4>
-        <ul>
-          <li>🛡️ <strong>Threat Detection:</strong> Advancing real-time NLP classification models for dark-social analysis.</li>
-          <li>⚡ <strong>Performance Tuning:</strong> Optimizing relational database architectures and background workers.</li>
-          <li>🎨 <strong>Creative Interfaces:</strong> Designing micro-animations and browser audio synthesizers (Web Audio API).</li>
-        </ul>
+      <!-- Column Spacing -->
+      <td width="20"></td>
+      <!-- Column 2: LeetCode Card -->
+      <td align="center" valign="top" width="460">
+        <a href="https://leetcode.com/u/anshulsharma200817-svg/" target="_blank">
+          <img src="assets/leetcode.svg" width="450" alt="LeetCode Quest Progress Card" />
+        </a>
       </td>
     </tr>
   </table>
@@ -85,8 +90,7 @@
     <td width="50%" valign="top" style="border: none; padding-left: 10px;">
       <h4>🧠 AI/ML &amp; Systems</h4>
       <ul>
-        <li><strong>Machine Learning:</strong> Scikit-Learn, PyTorch, SHAP, NLP Tokenization</li>
-        <li><strong>Metaheuristics:</strong> Genetic Algorithms (GA), SMA, HHO, AO</li>
+        <li><strong>Machine Learning:</strong> Solved 70+ algorithmic coding trials on LeetCode; NLP, Classification Pipelines, Scikit-Learn, PyTorch, SHAP, Metaheuristics (GA, SMA, HHO)</li>
         <li><strong>Database &amp; Tools:</strong> PostgreSQL, SQLite, Drizzle ORM, Docker, Nginx, Git, Bash</li>
       </ul>
     </td>
