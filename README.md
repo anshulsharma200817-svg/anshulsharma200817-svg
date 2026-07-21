@@ -83,7 +83,7 @@ graph TD
     DB[(🗄️ PostgreSQL)]
     Cache[(⚡ Redis Cache)]
     Celery[(⏱️ Celery Queue)]
-    UserData[📊 User Data &amp; Progress]
+    UserData[📊 User Data and Progress]
     AIService[🧠 AI Service Layer]
     Gemini[🤖 Gemini / OpenAI]
     RAG[📚 RAG Vector Store]
@@ -101,7 +101,8 @@ graph TD
     UserData --> AIService
     AIService --> Gemini
     AIService --> RAG
-    Gemini &amp; RAG --> Plan
+    Gemini --> Plan
+    RAG --> Plan
     Plan --> Analytics
 
     %% Node Custom Styles (Matching GitHub Dark Mode)
