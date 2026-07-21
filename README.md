@@ -54,6 +54,60 @@ and distilling them into robust, clean, and highly user-friendly digital systems
 * **Description:** An AI-powered threat detection platform built to monitor and flag illegal drug-trafficking activities across Telegram channels and uploaded Instagram/WhatsApp chat logs.
 * **Core Technology:** React (Vite/Tailwind), Django REST Framework, SQLite, Python NLP Pipeline (SGD Classifier & Regex Rules), Telethon (live scraping), SHA-256 evidence hashing.
 * **Key Achievement:** Achieved **0.97 Precision & 1.0 Recall** on held-out test sets. Correlates accounts across platforms using payment handles (UPI IDs) and compiles tamper-proof, legal evidence dossiers.
+* **Architecture Diagram:**
+
+```mermaid
+graph TD
+    %% Node Definitions
+    Telegram[📱 Telegram Live API]
+    Instagram[📸 Instagram Import]
+    WhatsApp[💬 WhatsApp Import]
+    ReactDashboard[💻 React/Vite Dashboard]
+    DjangoAPI[⚙️ Django REST API]
+    SQLiteDB[(🗄️ SQLite Database)]
+    LiveScraper[🕷️ Live Scraper - Telethon]
+    Rules[🔍 Rule-Based Matcher]
+    ML[🤖 SGD ML Classifier]
+    LLM[🧠 LLM Validator]
+    Correlation[🔗 UPI Payment Linker]
+    SHA[🔒 SHA-256 Hashing]
+    Dossier[📄 Legal Dossier Generator]
+
+    %% Flow Layout
+    Telegram -->|Live Feed| LiveScraper
+    Instagram -->|Manual Upload| ReactDashboard
+    WhatsApp -->|Manual Upload| ReactDashboard
+    LiveScraper --> DjangoAPI
+    ReactDashboard -->|API Calls| DjangoAPI
+    DjangoAPI --> SQLiteDB
+    
+    %% Engine Pipeline
+    DjangoAPI -->|Analyze Message| Rules
+    Rules -->|Flagged / Confident| Correlation
+    Rules -->|Ambiguous| ML
+    ML -->|Flagged / Confident| Correlation
+    ML -->|Still Ambiguous| LLM
+    LLM --> Correlation
+    
+    %% Correlation and Dossier
+    Correlation -->|Link Operators| SHA
+    SHA -->|Hash Messages| Dossier
+
+    %% Node Custom Styles (Matching GitHub Dark Mode)
+    style Telegram fill:#1e293b,stroke:#0284c7,stroke-width:1px,color:#38bdf8
+    style Instagram fill:#1e293b,stroke:#db2777,stroke-width:1px,color:#f472b6
+    style WhatsApp fill:#1e293b,stroke:#059669,stroke-width:1px,color:#34d399
+    style ReactDashboard fill:#1e293b,stroke:#3b82f6,stroke-width:1.5px,color:#38bdf8
+    style DjangoAPI fill:#1e1b4b,stroke:#8b5cf6,stroke-width:1.5px,color:#c084fc
+    style SQLiteDB fill:#0f172a,stroke:#334155,stroke-width:1px,color:#94a3b8
+    style LiveScraper fill:#0f172a,stroke:#e11d48,stroke-width:1.5px,color:#fda4af
+    style Rules fill:#1c1917,stroke:#ca8a04,stroke-width:1.2px,color:#fde047
+    style ML fill:#1e1b4b,stroke:#4f46e5,stroke-width:1.5px,color:#a5b4fc
+    style LLM fill:#311042,stroke:#d946ef,stroke-width:1.5px,color:#f472b6
+    style Correlation fill:#1c1917,stroke:#b45309,stroke-width:1.5px,color:#fcd34d
+    style SHA fill:#0f172a,stroke:#10b981,stroke-width:1.5px,color:#34d399
+    style Dossier fill:#111827,stroke:#64748b,stroke-width:2px,color:#f8fafc
+```
 
 ### ▓ THE SYSTEM — RPG Discipline Tracker
 > **Theme:** Solo Leveling RPG Gamification Dashboard
