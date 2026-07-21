@@ -121,10 +121,10 @@ graph TD
 * **Core Technology:** Python (Scikit-Learn), Streamlit frontend, SHAP Explainability.
 * **Key Achievement:** Combines 7 bio-inspired metaheuristics (GA, HHO, SMA, AO) with contribution weights to produce feature subsets that are **2.15× more stable** than baseline feature selectors.
 
-### 🧠 AI-Powered Study Planner & Architecture Pipeline
-> **Field:** Intelligent Systems & Cloud Architecture
-* **Description:** A full-stack AI-driven study planning platform that parses user syllabus and goals, executes RAG query retrieval from a vector store, and utilizes LLMs (Gemini/OpenAI API) to output dynamic study plans, charts, quizzes, and gamified progress tracking.
-* **Core Technology:** Next.js (React), Django REST Framework (Python), PostgreSQL, Redis Cache, Celery Queue, Gemini/OpenAI API, RAG Vector Search.
+### 🧠 Personalized Study Planner & Analytics Platform
+> **Field:** Full-Stack Systems & Database Architecture
+* **Description:** A full-stack study planning and tracking platform designed to organize academic workloads, monitor progress, manage schedules, and render custom study performance charts.
+* **Core Technology:** Next.js (React/TypeScript), Django REST Framework (Python), PostgreSQL Database, Google OAuth & JWT Authentication, Recharts Analytics.
 * **Architecture Diagram:**
 
 ```mermaid
@@ -132,32 +132,18 @@ graph TD
     %% Node Definitions
     User([👤 User])
     Frontend[💻 Next.js Frontend]
-    Auth{🔑 REST / JWT}
+    Auth{🔑 REST / JWT and Google OAuth}
     API[⚙️ Django REST API]
-    DB[(🗄️ PostgreSQL)]
-    Cache[(⚡ Redis Cache)]
-    Celery[(⏱️ Celery Queue)]
-    UserData[📊 User Data and Progress]
-    AIService[🧠 AI Service Layer]
-    Gemini[🤖 Gemini / OpenAI]
-    RAG[📚 RAG Vector Store]
-    Plan[📝 Study Plan Generation]
-    Analytics[📈 Charts • Quizzes • Analytics]
+    DB[(🗄️ PostgreSQL Database)]
+    Analytics[📈 Recharts Analytics and Reports]
 
     %% Flow Layout
     User -->|Interacts| Frontend
-    Frontend --> Auth
-    Auth --> API
-    API --> DB
-    API --> Cache
-    API --> Celery
-    DB --> UserData
-    UserData --> AIService
-    AIService --> Gemini
-    AIService --> RAG
-    Gemini --> Plan
-    RAG --> Plan
-    Plan --> Analytics
+    Frontend -->|Authenticate| Auth
+    Auth -->|Authorize API Calls| API
+    API -->|Read / Write State| DB
+    DB -->|Analyze Progress| Analytics
+    Analytics -->|Visualize| Frontend
 
     %% Node Custom Styles (Matching GitHub Dark Mode)
     style User fill:#3b82f6,stroke:#2563eb,stroke-width:1.5px,color:#fff
@@ -165,13 +151,6 @@ graph TD
     style Auth fill:#0f172a,stroke:#10b981,stroke-width:1.5px,color:#34d399
     style API fill:#1e1b4b,stroke:#8b5cf6,stroke-width:1.5px,color:#c084fc
     style DB fill:#0f172a,stroke:#334155,stroke-width:1px,color:#94a3b8
-    style Cache fill:#0f172a,stroke:#ef4444,stroke-width:1px,color:#f87171
-    style Celery fill:#0f172a,stroke:#f97316,stroke-width:1px,color:#fb923c
-    style UserData fill:#0f172a,stroke:#06b6d4,stroke-width:1.5px,color:#22d3ee
-    style AIService fill:#311042,stroke:#d946ef,stroke-width:2px,color:#f472b6
-    style Gemini fill:#0f172a,stroke:#e879f9,stroke-width:1px,color:#f472b6
-    style RAG fill:#0f172a,stroke:#a78bfa,stroke-width:1px,color:#c084fc
-    style Plan fill:#1e1b4b,stroke:#8b5cf6,stroke-width:1.5px,color:#c084fc
     style Analytics fill:#111827,stroke:#10b981,stroke-width:2px,color:#34d399
 ```
 
