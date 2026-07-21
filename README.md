@@ -67,11 +67,58 @@ and distilling them into robust, clean, and highly user-friendly digital systems
 * **Core Technology:** Python (Scikit-Learn), Streamlit frontend, SHAP Explainability.
 * **Key Achievement:** Combines 7 bio-inspired metaheuristics (GA, HHO, SMA, AO) with contribution weights to produce feature subsets that are **2.15× more stable** than baseline feature selectors.
 
-### ⌨️ Online Type Master & 📐 Unit Converter Suite
-> **Field:** High-Performance Utility Web Apps
-* **Description:** High-efficiency tools including a bilingual (English/Hindi) typing master engine and a technical calculator suite (GPU FLOPs, attendance logs, CGPA models).
-* **Core Technology:** Astro framework, TypeScript, Tailwind CSS, Local Storage.
-* **Key Achievement:** Built customized, accessible UI elements with instant state transitions, dynamic typing calculation mechanics, and local storage state persistence.
+### 🧠 AI-Powered Study Planner & Architecture Pipeline
+> **Field:** Intelligent Systems & Cloud Architecture
+* **Description:** A full-stack AI-driven study planning platform that parses user syllabus and goals, executes RAG query retrieval from a vector store, and utilizes LLMs (Gemini/OpenAI API) to output dynamic study plans, charts, quizzes, and gamified progress tracking.
+* **Core Technology:** Next.js (React), Django REST Framework (Python), PostgreSQL, Redis Cache, Celery Queue, Gemini/OpenAI API, RAG Vector Search.
+* **Architecture Diagram:**
+
+```mermaid
+graph TD
+    %% Node Definitions
+    User([👤 User])
+    Frontend[💻 Next.js Frontend]
+    Auth{🔑 REST / JWT}
+    API[⚙️ Django REST API]
+    DB[(🗄️ PostgreSQL)]
+    Cache[(⚡ Redis Cache)]
+    Celery[(⏱️ Celery Queue)]
+    UserData[📊 User Data &amp; Progress]
+    AIService[🧠 AI Service Layer]
+    Gemini[🤖 Gemini / OpenAI]
+    RAG[📚 RAG Vector Store]
+    Plan[📝 Study Plan Generation]
+    Analytics[📈 Charts • Quizzes • Analytics]
+
+    %% Flow Layout
+    User -->|Interacts| Frontend
+    Frontend --> Auth
+    Auth --> API
+    API --> DB
+    API --> Cache
+    API --> Celery
+    DB --> UserData
+    UserData --> AIService
+    AIService --> Gemini
+    AIService --> RAG
+    Gemini &amp; RAG --> Plan
+    Plan --> Analytics
+
+    %% Node Custom Styles (Matching GitHub Dark Mode)
+    style User fill:#3b82f6,stroke:#2563eb,stroke-width:1.5px,color:#fff
+    style Frontend fill:#1e293b,stroke:#3b82f6,stroke-width:1.5px,color:#38bdf8
+    style Auth fill:#0f172a,stroke:#10b981,stroke-width:1.5px,color:#34d399
+    style API fill:#1e1b4b,stroke:#8b5cf6,stroke-width:1.5px,color:#c084fc
+    style DB fill:#0f172a,stroke:#334155,stroke-width:1px,color:#94a3b8
+    style Cache fill:#0f172a,stroke:#ef4444,stroke-width:1px,color:#f87171
+    style Celery fill:#0f172a,stroke:#f97316,stroke-width:1px,color:#fb923c
+    style UserData fill:#0f172a,stroke:#06b6d4,stroke-width:1.5px,color:#22d3ee
+    style AIService fill:#311042,stroke:#d946ef,stroke-width:2px,color:#f472b6
+    style Gemini fill:#0f172a,stroke:#e879f9,stroke-width:1px,color:#f472b6
+    style RAG fill:#0f172a,stroke:#a78bfa,stroke-width:1px,color:#c084fc
+    style Plan fill:#1e1b4b,stroke:#8b5cf6,stroke-width:1.5px,color:#c084fc
+    style Analytics fill:#111827,stroke:#10b981,stroke-width:2px,color:#34d399
+```
 
 <br />
 <hr style="border: 1px solid #1f2937;" />
