@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 220" width="100%" height="100%">
   <defs>
+    <!-- Role Ticker Clip Mask -->
+    <clipPath id="ticker-clip">
+      <rect x="0" y="-18" width="600" height="26" />
+    </clipPath>
+
     <!-- Fonts -->
     <style type="text/css">
       @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&amp;family=Fira+Code:wght@400;500&amp;display=swap');
@@ -44,23 +49,16 @@
         100% { filter: hue-rotate(360deg) drop-shadow(0 0 4px #6366f1); }
       }
 
-      /* Roles cycle animation */
-      @keyframes role-cycle-1 {
-        0%, 28% { opacity: 1; transform: translateY(0); }
-        33%, 95% { opacity: 0; transform: translateY(-10px); }
-        100% { opacity: 0; transform: translateY(10px); }
+      /* Roles ticker scroll animation */
+      .role-ticker {
+        animation: scroll-ticker 12s cubic-bezier(0.76, 0, 0.24, 1) infinite;
       }
 
-      @keyframes role-cycle-2 {
-        0%, 33% { opacity: 0; transform: translateY(10px); }
-        38%, 61% { opacity: 1; transform: translateY(0); }
-        66%, 100% { opacity: 0; transform: translateY(-10px); }
-      }
-
-      @keyframes role-cycle-3 {
-        0%, 66% { opacity: 0; transform: translateY(10px); }
-        71%, 94% { opacity: 1; transform: translateY(0); }
-        99%, 100% { opacity: 0; transform: translateY(-10px); }
+      @keyframes scroll-ticker {
+        0%, 28% { transform: translateY(0); }
+        33%, 61% { transform: translateY(-28px); }
+        66%, 94% { transform: translateY(-56px); }
+        100% { transform: translateY(0); }
       }
 
       @keyframes blink {
@@ -77,10 +75,6 @@
       .anim-rotate-cw { animation: rotate-clockwise 20s linear infinite; transform-origin: 700px 110px; }
       .anim-rotate-ccw { animation: rotate-counter 15s linear infinite; transform-origin: 700px 110px; }
       .anim-border { animation: hue-shift 10s linear infinite; }
-      
-      .role-1 { animation: role-cycle-1 12s infinite; }
-      .role-2 { animation: role-cycle-2 12s infinite; }
-      .role-3 { animation: role-cycle-3 12s infinite; }
       
       .cursor { animation: blink 0.8s infinite; }
       
@@ -140,43 +134,15 @@
     <!-- Title / Name -->
     <text x="50" y="85" font-size="38" font-weight="800" fill="url(#name-grad)" letter-spacing="1" class="glow-cyan">ANSHUL SHARMA</text>
     
-    <!-- Animated Role text -->
-    <!-- Position all roles at the same coordinates so they overlay. Keyframes handle display timing. -->
-    <g transform="translate(50, 122)">
-      <!-- Role 1 -->
-      <g class="role-1">
-        <text x="0" y="0" font-size="20" font-weight="600" fill="#f1f5f9" letter-spacing="0.5">
-          Full-Stack Developer
-        </text>
-      </g>
-      
-      <!-- Role 2 -->
-      <g class="role-2">
-        <text x="0" y="0" font-size="20" font-weight="600" fill="#38bdf8" letter-spacing="0.5">
-          Machine Learning &amp; NLP Engineer
-        </text>
-      </g>
-      
-      <!-- Role 3 -->
-      <g class="role-3">
-        <text x="0" y="0" font-size="20" font-weight="600" fill="#c084fc" letter-spacing="0.5">
-          Systems Architect &amp; Creator
-        </text>
-      </g>
-      
-      <!-- Blinking Cursor (Offset dynamically using spacing or just draw after text) -->
-      <!-- We can simulate it by rendering it at an average position or just at the end of the longest role. -->
-      <!-- Let's put a subtle blinking prompt character at the beginning of the line instead! -->
-    </g>
-
     <!-- Cyber prompt symbol -->
     <text x="50" y="120" font-size="20" font-weight="600" fill="#3b82f6" class="mono-text cursor">&gt;</text>
-    <!-- Shift the roles right to accommodate the prompt -->
-    <g transform="translate(72, 122)">
-      <!-- Overlay roles with prompt shift -->
-      <text x="0" y="0" font-size="18" font-weight="600" fill="#f1f5f9" class="role-1">Full-Stack Developer</text>
-      <text x="0" y="0" font-size="18" font-weight="600" fill="#00f2fe" class="role-2">Machine Learning &amp; NLP Engineer</text>
-      <text x="0" y="0" font-size="18" font-weight="600" fill="#d946ef" class="role-3">Systems &amp; Optimization Specialist</text>
+    <!-- Shift the roles right to accommodate the prompt and apply clip mask -->
+    <g transform="translate(72, 122)" clip-path="url(#ticker-clip)">
+      <g class="role-ticker">
+        <text x="0" y="0" font-size="18" font-weight="600" fill="#f1f5f9">Full-Stack Developer</text>
+        <text x="0" y="28" font-size="18" font-weight="600" fill="#00f2fe">Machine Learning &amp; NLP Engineer</text>
+        <text x="0" y="56" font-size="18" font-weight="600" fill="#d946ef">Systems &amp; Optimization Specialist</text>
+      </g>
     </g>
 
     <!-- Skill Tags / Status Badges -->
