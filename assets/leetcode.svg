@@ -29,22 +29,18 @@
         filter: drop-shadow(0 0 4px #fbbf24) drop-shadow(0 0 8px rgba(251, 191, 36, 0.3));
       }
 
-      /* Bar Load Animations */
-      @keyframes load-bar-easy {
-        from { width: 0px; }
-        to { width: 110px; } /* 36 solved visual bar */
+      /* Dial Segment Load Animations */
+      @keyframes load-easy-arc {
+        from { stroke-dasharray: 0 200; }
+        to { stroke-dasharray: 30 200; }
       }
-      @keyframes load-bar-medium {
-        from { width: 0px; }
-        to { width: 115px; } /* 37 solved visual bar */
+      @keyframes load-medium-arc {
+        from { stroke-dasharray: 0 200; }
+        to { stroke-dasharray: 30 200; }
       }
-      @keyframes load-bar-hard {
-        from { width: 0px; }
-        to { width: 35px; }  /* 3 solved visual bar */
-      }
-      @keyframes load-dial-ring {
-        from { stroke-dashoffset: 251.2; }
-        to { stroke-dashoffset: 165px; } /* Representing completion ratio */
+      @keyframes load-hard-arc {
+        from { stroke-dasharray: 0 200; }
+        to { stroke-dasharray: 7 200; }
       }
 
       /* Scanner effect */
@@ -66,14 +62,13 @@
       }
 
       /* Classes */
-      .bar-easy { animation: load-bar-easy 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
-      .bar-medium { animation: load-bar-medium 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
-      .bar-hard { animation: load-bar-hard 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
-      .dial-ring { animation: load-dial-ring 2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; stroke-dasharray: 251.2; }
+      .bar-easy { animation: load-easy-arc 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      .bar-medium { animation: load-medium-arc 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
+      .bar-hard { animation: load-hard-arc 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
       
       .scanner-line { animation: scan-animation 6s linear infinite 1s; }
       .pulse-item { animation: pulse-light 2s ease-in-out infinite; }
-      .pulse-core { animation: pulse-dial 2.5s ease-in-out infinite; transform-origin: 75px 145px; }
+      .pulse-core { animation: pulse-dial 2.5s ease-in-out infinite; transform-origin: 80px 277px; }
     </style>
 
     <!-- Gradients -->
@@ -137,25 +132,21 @@
     <!-- Divider Line -->
     <line x1="20" y1="75" x2="440" y2="75" stroke="#1f2937" stroke-width="1" />
 
-    <!-- Left Section: Circular Total Solved Dial -->
+    <!-- Left Section: LeetCode Brand Crest -->
     <g transform="translate(20, 90)">
-      <!-- Cyber Box for Dial -->
+      <!-- Cyber Box for Emblem -->
       <rect width="110" height="110" rx="8" fill="#0b0f19" stroke="#1e293b" stroke-width="1.5" />
       <rect x="4" y="4" width="102" height="102" rx="6" fill="none" stroke="#2563eb" stroke-width="1" opacity="0.2" />
 
-      <!-- Glowing Total Solved Progress Circle -->
-      <g transform="translate(55, 45)" class="pulse-core">
-        <!-- Background track circle -->
-        <circle cx="0" cy="0" r="32" fill="none" stroke="#1f2937" stroke-width="5" />
-        <!-- Animated progress circle (Total 76 Solved) -->
-        <circle cx="0" cy="0" r="32" fill="none" stroke="url(#dial-gradient)" stroke-width="5.5" stroke-linecap="round" transform="rotate(-90)" class="dial-ring glow-neon-cyan" />
-        
-        <!-- Text inside circle -->
-        <text x="0" y="7" font-size="24" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-cyan">76</text>
+      <!-- Glowing LeetCode Logo -->
+      <g transform="translate(24, 20) scale(0.65)" class="glow-neon-cyan">
+        <path d="M67.506,83.066 C70.000,80.576 74.037,80.582 76.522,83.080 C79.008,85.578 79.002,89.622 76.508,92.112 L65.435,103.169 C55.219,113.370 38.560,113.518 28.172,103.513 C28.112,103.455 23.486,98.920 8.227,83.957 C-1.924,74.002 -2.936,58.074 6.616,47.846 L24.428,28.774 C33.910,18.621 51.387,17.512 62.227,26.278 L78.405,39.362 C81.144,41.577 81.572,45.598 79.361,48.342 C77.149,51.087 73.135,51.515 70.395,49.300 L54.218,36.217 C48.549,31.632 38.631,32.262 33.739,37.500 L15.927,56.572 C11.277,61.552 11.786,69.574 17.146,74.829 C28.351,85.816 36.987,94.284 36.997,94.294 C42.398,99.495 51.130,99.418 56.433,94.123 L67.506,83.066 Z" fill="#ffa116" />
+        <path d="M49.412,2.023 C51.817,-0.552 55.852,-0.686 58.423,1.722 C60.994,4.132 61.128,8.173 58.723,10.749 L15.928,56.572 C11.277,61.551 11.786,69.573 17.145,74.829 L36.909,94.209 C39.425,96.676 39.468,100.719 37.005,103.240 C34.542,105.760 30.506,105.804 27.990,103.336 L8.226,83.956 C-1.924,74.002 -2.936,58.074 6.617,47.846 L49.412,2.023 Z" fill="#f3f4f6" />
+        <path d="M40.606,72.001 C37.086,72.001 34.231,69.142 34.231,65.614 C34.231,62.087 37.086,59.228 40.606,59.228 L87.624,59.228 C91.145,59.228 94,62.087 94,65.614 C94,69.142 91.145,72.001 87.624,72.001 L40.606,72.001 Z" fill="#b3b3b3" />
       </g>
       
-      <!-- LEVEL/STATUS label below dial -->
-      <text x="55" y="94" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="1.5">SOLVED</text>
+      <!-- Logo Label below -->
+      <text x="55" y="94" font-size="9" font-weight="700" fill="#64748b" text-anchor="middle" letter-spacing="1">LEETCODE</text>
     </g>
 
     <!-- Right Section: General Stats & Info -->
@@ -184,52 +175,59 @@
     <!-- Divider Line -->
     <line x1="20" y1="215" x2="440" y2="215" stroke="#1f2937" stroke-width="1" />
 
-    <!-- Bottom Section: Difficulty Breakdown & Progress Bars -->
+    <!-- Bottom Section: Circular Gauge Wheel & Stacked Progress Cards -->
     <g transform="translate(20, 222)">
       
-      <!-- Difficulty 1: EASY -->
-      <g transform="translate(0, 10)">
-        <text x="0" y="12" font-size="13" font-weight="700" fill="#10b981" letter-spacing="1" class="glow-neon-emerald">EASY</text>
-        <!-- Solved vs Total Available -->
-        <text x="70" y="12" font-size="12" font-weight="700" fill="#94a3b8" class="mono-text">36 <tspan fill="#475569" font-size="10">/ 956</tspan></text>
+      <!-- Left Sub-Section: Solved Gauge Wheel -->
+      <g transform="translate(10, 0)">
+        <!-- Background track arc (circumference ~ 239px, 270 degree arc = 179px, gap = 60px) -->
+        <path d="M 33.2 81.8 A 38 38 0 1 1 86.8 81.8" fill="none" stroke="#1c2538" stroke-width="5.5" stroke-linecap="round" />
         
-        <!-- Bar Track -->
-        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
-        <!-- Animated Bar -->
-        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-easy)" class="bar-easy glow-neon-emerald" />
+        <!-- Easy Arc segment (length 30px, offset 0px) -->
+        <path d="M 33.2 81.8 A 38 38 0 1 1 86.8 81.8" fill="none" stroke="url(#bar-gradient-easy)" stroke-width="6" stroke-linecap="round" stroke-dasharray="30 200" stroke-dashoffset="0" class="bar-easy glow-neon-emerald" />
+        
+        <!-- Medium Arc segment (length 30px, offset -30px) -->
+        <path d="M 33.2 81.8 A 38 38 0 1 1 86.8 81.8" fill="none" stroke="url(#bar-gradient-medium)" stroke-width="6" stroke-linecap="round" stroke-dasharray="30 200" stroke-dashoffset="-30" class="bar-medium glow-neon-amber" />
+        
+        <!-- Hard Arc segment (length 7px, offset -60px) -->
+        <path d="M 33.2 81.8 A 38 38 0 1 1 86.8 81.8" fill="none" stroke="url(#bar-gradient-hard)" stroke-width="6" stroke-linecap="round" stroke-dasharray="7 200" stroke-dashoffset="-60" class="bar-hard glow-neon-rose" />
+        
+        <!-- Solved gauge text elements inside -->
+        <g class="pulse-core">
+          <text x="60" y="49" text-anchor="middle">
+            <tspan font-size="20" font-weight="800" fill="#f1f5f9">76</tspan>
+            <tspan font-size="11" font-weight="500" fill="#475569">/3299</tspan>
+          </text>
+          <text x="60" y="63" font-size="9" font-weight="500" fill="#64748b" text-anchor="middle">Solved</text>
+          <text x="60" y="79" font-size="8" font-weight="700" fill="#10b981" text-anchor="middle" class="mono-text">3 Attempting</text>
+        </g>
       </g>
 
-      <!-- Difficulty 2: MEDIUM -->
-      <g transform="translate(0, 40)">
-        <text x="0" y="12" font-size="13" font-weight="700" fill="#fbbf24" letter-spacing="1" class="glow-neon-amber">MEDIUM</text>
-        <text x="70" y="12" font-size="12" font-weight="700" fill="#94a3b8" class="mono-text">37 <tspan fill="#475569" font-size="10">/ 2088</tspan></text>
-        
-        <!-- Bar Track -->
-        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
-        <!-- Animated Bar -->
-        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-medium)" class="bar-medium glow-neon-amber" />
-      </g>
+      <!-- Right Sub-Section: Difficulty Stacked Cards (Easy, Medium, Hard) -->
+      <g transform="translate(140, 5)">
+        <!-- Easy Card -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="280" height="32" rx="6" fill="#0b0f19" stroke="#1e293b" stroke-width="1" />
+          <rect x="0" y="0" width="4" height="32" rx="2" fill="#10b981" />
+          <text x="15" y="20" font-size="12" font-weight="700" fill="#10b981" class="glow-neon-emerald">Easy</text>
+          <text x="265" y="20" font-size="12" font-weight="700" fill="#f1f5f9" class="mono-text" text-anchor="end">36 <tspan fill="#475569" font-size="10">/ 830</tspan></text>
+        </g>
 
-      <!-- Difficulty 3: HARD -->
-      <g transform="translate(0, 70)">
-        <text x="0" y="12" font-size="13" font-weight="700" fill="#f43f5e" letter-spacing="1" class="glow-neon-rose">HARD</text>
-        <text x="70" y="12" font-size="12" font-weight="700" fill="#94a3b8" class="mono-text">3 <tspan fill="#475569" font-size="10">/ 955</tspan></text>
-        
-        <!-- Bar Track -->
-        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
-        <!-- Animated Bar -->
-        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-hard)" class="bar-hard glow-neon-rose" />
-      </g>
+        <!-- Medium Card -->
+        <g transform="translate(0, 39)">
+          <rect x="0" y="0" width="280" height="32" rx="6" fill="#0b0f19" stroke="#1e293b" stroke-width="1" />
+          <rect x="0" y="0" width="4" height="32" rx="2" fill="#fbbf24" />
+          <text x="15" y="20" font-size="12" font-weight="700" fill="#fbbf24" class="glow-neon-amber">Medium</text>
+          <text x="265" y="20" font-size="12" font-weight="700" fill="#f1f5f9" class="mono-text" text-anchor="end">37 <tspan fill="#475569" font-size="10">/ 1723</tspan></text>
+        </g>
 
-      <!-- Bottom Quest Message -->
-      <g transform="translate(0, 112)">
-        <!-- Small tech info text -->
-        <text x="0" y="12" font-size="9" font-weight="700" fill="#64748b" class="mono-text" letter-spacing="0.5">QUEST TYPE: COMBAT ALGORITHMS INGESTION SEQUENCE</text>
-        
-        <!-- Tech status dots -->
-        <circle cx="410" cy="9" r="2" fill="#10b981" class="pulse-item" />
-        <circle cx="416" cy="9" r="2" fill="#fbbf24" class="pulse-item" />
-        <circle cx="422" cy="9" r="2" fill="#f43f5e" class="pulse-item" />
+        <!-- Hard Card -->
+        <g transform="translate(0, 78)">
+          <rect x="0" y="0" width="280" height="32" rx="6" fill="#0b0f19" stroke="#1e293b" stroke-width="1" />
+          <rect x="0" y="0" width="4" height="32" rx="2" fill="#f43f5e" />
+          <text x="15" y="20" font-size="12" font-weight="700" fill="#f43f5e" class="glow-neon-rose">Hard</text>
+          <text x="265" y="20" font-size="12" font-weight="700" fill="#f1f5f9" class="mono-text" text-anchor="end">3 <tspan fill="#475569" font-size="10">/ 744</tspan></text>
+        </g>
       </g>
       
     </g>
