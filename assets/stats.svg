@@ -26,27 +26,27 @@
       /* Bar Load Animations */
       @keyframes load-bar-int {
         from { width: 0px; }
-        to { width: 188px; } /* 94% of 200px */
+        to { width: 130px; } /* 72% of 180px */
       }
       @keyframes load-bar-str {
         from { width: 0px; }
-        to { width: 192px; } /* 96% of 200px */
+        to { width: 140px; } /* 78% of 180px */
       }
       @keyframes load-bar-sen {
         from { width: 0px; }
-        to { width: 184px; } /* 92% of 200px */
+        to { width: 122px; } /* 68% of 180px */
       }
       @keyframes load-bar-agi {
         from { width: 0px; }
-        to { width: 180px; } /* 90% of 200px */
+        to { width: 117px; } /* 65% of 180px */
       }
       @keyframes load-bar-vit {
         from { width: 0px; }
-        to { width: 178px; } /* 89% of 200px */
+        to { width: 126px; } /* 70% of 180px */
       }
       @keyframes load-bar-xp {
         from { width: 0px; }
-        to { width: 374px; } /* 98.4% of 380px */
+        to { width: 241px; } /* 57.4% of 420px */
       }
 
       /* Scanner effect */
@@ -166,7 +166,7 @@
 
       <!-- Level Text inside Crest area -->
       <g class="pulse-lvl">
-        <text x="55" y="53" font-size="24" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-blue">99</text>
+        <text x="55" y="53" font-size="24" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-blue">34</text>
         <text x="55" y="90" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="1.5">LEVEL</text>
       </g>
     </g>
@@ -178,20 +178,24 @@
       <text x="65" y="18" font-size="15" font-weight="700" fill="#f8fafc">Anshul Sharma</text>
 
       <!-- Rank -->
-      <text x="0" y="40" font-size="14" font-weight="500" fill="#64748b">RANK:</text>
-      <text x="65" y="42" font-size="17" font-weight="800" fill="url(#gold-text-grad)" class="glow-gold" letter-spacing="1">S-RANK (MONARCH)</text>
+      <text x="0" y="36" font-size="14" font-weight="500" fill="#64748b">RANK:</text>
+      <text x="65" y="38" font-size="16" font-weight="800" fill="#00f2fe" class="glow-neon-blue" letter-spacing="1">C-RANK (MID-TIER)</text>
+
+      <!-- Tier List -->
+      <text x="0" y="54" font-size="14" font-weight="500" fill="#64748b">TIERS:</text>
+      <text x="65" y="54" font-size="11" font-weight="600" fill="#94a3b8">E ➔ D ➔ <tspan fill="#00f2fe" font-weight="800">[C]</tspan> ➔ B ➔ A ➔ S (MAX)</text>
 
       <!-- Class -->
-      <text x="0" y="62" font-size="14" font-weight="500" fill="#64748b">CLASS:</text>
-      <text x="65" y="62" font-size="14" font-weight="600" fill="#00f2fe">Full-Stack Architect</text>
+      <text x="0" y="72" font-size="14" font-weight="500" fill="#64748b">CLASS:</text>
+      <text x="65" y="72" font-size="14" font-weight="600" fill="#a855f7">Full-Stack Developer</text>
 
       <!-- Special Guild/Affiliation -->
-      <text x="0" y="84" font-size="14" font-weight="500" fill="#64748b">GUILD:</text>
-      <text x="65" y="84" font-size="14" font-weight="600" fill="#a855f7">Cybercell Intelligence</text>
+      <text x="0" y="90" font-size="14" font-weight="500" fill="#64748b">GUILD:</text>
+      <text x="65" y="90" font-size="14" font-weight="600" fill="#3b82f6">Cybercell Intelligence</text>
 
       <!-- Status Indicator -->
-      <text x="0" y="106" font-size="14" font-weight="500" fill="#64748b">STATUS:</text>
-      <text x="65" y="106" font-size="12" font-weight="700" fill="#10b981" class="mono-text">[ ACTIVE / ARISE ]</text>
+      <text x="0" y="108" font-size="14" font-weight="500" fill="#64748b">STATUS:</text>
+      <text x="65" y="108" font-size="12" font-weight="700" fill="#10b981" class="mono-text">[ ACTIVE / ARISE ]</text>
     </g>
 
     <!-- Divider Line -->
@@ -203,7 +207,7 @@
       <!-- Attribute 1: INT (AI / ML) -->
       <g transform="translate(0, 10)">
         <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">INT [AI &amp; ML &amp; NLP]</text>
-        <text x="210" y="12" font-size="12" font-weight="700" fill="#00f2fe" class="mono-text">94</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#00f2fe" class="mono-text">72</text>
         
         <!-- Bar BG -->
         <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
@@ -214,7 +218,7 @@
       <!-- Attribute 2: STR (Backend / DB) -->
       <g transform="translate(0, 30)">
         <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">STR [Backend / SQL]</text>
-        <text x="210" y="12" font-size="12" font-weight="700" fill="#3b82f6" class="mono-text">96</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#3b82f6" class="mono-text">78</text>
         
         <!-- Bar BG -->
         <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
@@ -225,7 +229,7 @@
       <!-- Attribute 3: SEN (Frontend / UI) -->
       <g transform="translate(0, 50)">
         <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">SEN [Frontend / UX]</text>
-        <text x="210" y="12" font-size="12" font-weight="700" fill="#ec4899" class="mono-text">92</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#ec4899" class="mono-text">68</text>
         
         <!-- Bar BG -->
         <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
@@ -236,7 +240,7 @@
       <!-- Attribute 4: AGI (Systems / Opt) -->
       <g transform="translate(0, 70)">
         <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">AGI [Systems / Speed]</text>
-        <text x="210" y="12" font-size="12" font-weight="700" fill="#fbbf24" class="mono-text">90</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#fbbf24" class="mono-text">65</text>
         
         <!-- Bar BG -->
         <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
@@ -247,7 +251,7 @@
       <!-- Attribute 5: VIT (Algorithms) -->
       <g transform="translate(0, 90)">
         <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">VIT [DSA &amp; Logic]</text>
-        <text x="210" y="12" font-size="12" font-weight="700" fill="#10b981" class="mono-text">89</text>
+        <text x="210" y="12" font-size="12" font-weight="700" fill="#10b981" class="mono-text">70</text>
         
         <!-- Bar BG -->
         <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
@@ -258,7 +262,7 @@
       <!-- XP Section -->
       <g transform="translate(0, 114)">
         <!-- XP text -->
-        <text x="0" y="11" font-size="9" font-weight="700" fill="#64748b" class="mono-text" letter-spacing="0.5">XP: 98,450 / 100,000 (98.45%)</text>
+        <text x="0" y="11" font-size="9" font-weight="700" fill="#64748b" class="mono-text" letter-spacing="0.5">XP: 14,350 / 25,000 (57.40%)</text>
         
         <!-- XP Bar BG -->
         <rect x="0" y="15" width="420" height="6" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5" />
