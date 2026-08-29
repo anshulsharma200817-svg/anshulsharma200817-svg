@@ -233,25 +233,31 @@ graph TD
 <hr style="border: 1px solid #1f2937;" />
 <br />
 
-## 📊 Programmer Statistics (GitHub Metrics)
+## 🐙 GitHub
 
 <div align="center">
-  <table border="0" cellpadding="0" cellspacing="0">
-    <tr>
-      <td align="center" valign="middle">
-        <a href="https://github.com/anshulsharma200817-svg">
-          <img src="https://github-stats-extended.vercel.app/api?username=anshulsharma200817-svg&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117" alt="Anshul's GitHub Stats" height="150" />
-        </a>
-      </td>
-      <td width="20"></td>
-      <td align="center" valign="middle">
-        <a href="https://github.com/anshulsharma200817-svg?tab=repositories">
-          <img src="https://github-stats-extended.vercel.app/api/top-langs?username=anshulsharma200817-svg&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117" alt="Anshul's Top Languages" height="150" />
-        </a>
-      </td>
-    </tr>
-  </table>
+  <a href="https://github.com/anshulsharma200817-svg">
+    <img src="assets/github_dashboard.svg" width="850" alt="GitHub Synapse Core Metrics" />
+  </a>
 </div>
+
+<br />
+
+## 📁 Open Source
+
+Where the work happens — the projects themselves, not a PR tally.
+
+| Ecosystem / Project | Domain / Purpose |
+| :--- | :--- |
+| [DAI-studytracker](https://github.com/anshulsharma200817-svg/DAI-studytracker) | AI-powered academic tracker with dual RAG routing |
+| [NarcoScope AI](https://github.com/anshulsharma200817-svg/narcoscope_ai) | OSINT threat detection for law enforcement intelligence |
+| [Java DSA Advanced](https://github.com/anshulsharma200817-svg/javadsaadvanced) | Advanced data structures &amp; graph traversal algorithms |
+
+<br />
+
+## 🔨 Building
+
+**DAI-studytracker** — An academic discipline engine designed to orchestrate study sessions, generate dynamic quizzes, and map conceptual progress. It utilizes a Next.js frontend integrated with Django API endpoints, leveraging Celery for background RAG document indexing and PostgreSQL for tracking user XP.
 
 <br />
 
