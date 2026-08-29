@@ -24,19 +24,19 @@ and distilling them into robust, clean, and highly user-friendly digital systems
 <br />
 
 <div align="center">
-  <h3>⚡ System Dashboard</h3>
+  <h3>⚡ Developer Runtime Console</h3>
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
       <!-- Column 1: Status Card -->
       <td align="center" valign="top" width="460">
-        <img src="assets/stats.svg" width="450" alt="The System - Programmer Status Card" />
+        <img src="assets/stats.svg" width="450" alt="Developer Status Card" />
       </td>
       <!-- Column Spacing -->
       <td width="20"></td>
       <!-- Column 2: LeetCode Card -->
       <td align="center" valign="top" width="460">
         <a href="https://leetcode.com/u/anshulsharma200817-svg/" target="_blank">
-          <img src="assets/leetcode.svg" width="450" alt="LeetCode Quest Progress Card" />
+          <img src="assets/leetcode.svg" width="450" alt="LeetCode Performance Card" />
         </a>
       </td>
     </tr>
@@ -257,5 +257,4 @@ graph TD
 
 <div align="center" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;">
   <p>📬 Let's connect! Reach out via <a href="https://github.com/anshulsharma200817-svg">GitHub Issues</a> or explore my projects linked in the repositories.</p>
-  <sub>"Once you step into the gate, the only way is forward." — The System</sub>
 </div>

@@ -197,27 +197,27 @@ def calculate_rpg_level(contributions):
 
 def get_rank(level):
     if level < 10:
-        return "E-RANK (NOVICE)"
+        return "JUN-II (NOVICE)"
     elif level < 20:
-        return "D-RANK (SCOUT)"
+        return "JUN-I (DEVELOPER)"
     elif level < 35:
-        return "C-RANK (MID-TIER)"
+        return "MID-II (PROGRAMMER)"
     elif level < 50:
-        return "B-RANK (ELITE)"
+        return "MID-I (ENGINEER)"
     elif level < 80:
-        return "A-RANK (RAIDER)"
+        return "SEN (ARCHITECT)"
     else:
-        return "S-RANK (MONARCH)"
+        return "PRIN (MONARCH)"
 
 def generate_tiers_tspan(rank):
-    tiers = ['E', 'D', 'C', 'B', 'A', 'S']
+    tiers = ['JUN-II', 'JUN-I', 'MID-II', 'MID-I', 'SEN', 'PRIN']
     output_parts = []
     for t in tiers:
-        if t == rank[0]: # Highlight matching rank letter
+        if t in rank:
             output_parts.append(f'<tspan fill="#00f2fe" font-weight="800">[{t}]</tspan>')
         else:
             output_parts.append(t)
-    return " ➔ ".join(output_parts) + " (MAX)"
+    return " ➔ ".join(output_parts)
 
 def update_files():
     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -304,17 +304,17 @@ def update_files():
 
         # Solver rank logic
         if ranking < 50000:
-            lc_solver = "S-RANK COMPETITOR"
+            lc_solver = "ELITE ARCHITECT"
         elif ranking < 250000:
-            lc_solver = "A-RANK COMPETITOR"
+            lc_solver = "STAFF ENGINEER"
         elif ranking < 1000000:
-            lc_solver = "B-RANK COMPETITOR"
+            lc_solver = "SENIOR DEVELOPER"
         elif ranking < 2500000:
-            lc_solver = "C-RANK COMPETITOR"
+            lc_solver = "MID-TIER CODER"
         elif ranking < 5000000:
-            lc_solver = "D-RANK COMPETITOR"
+            lc_solver = "ASSOCIATE CODER"
         else:
-            lc_solver = "E-RANK COMPETITOR"
+            lc_solver = "APPRENTICE"
 
         lc_content = re.sub(r'(<text id="lc-rank"[^>]*>).*?(</text>)', rf'\g<1>{lc_rank_str}\2', lc_content)
         lc_content = re.sub(r'(<text id="lc-solver"[^>]*>).*?(</text>)', rf'\g<1>{lc_solver}\2', lc_content)

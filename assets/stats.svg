@@ -17,24 +17,21 @@
         filter: drop-shadow(0 0 4px #00f2fe) drop-shadow(0 0 8px rgba(0, 242, 254, 0.3));
       }
       .glow-neon-purple {
-        filter: drop-shadow(0 0 4px #a855f7) drop-shadow(0 0 8px rgba(168, 85, 247, 0.3));
-      }
-      .glow-gold {
-        filter: drop-shadow(0 0 4px #fbbf24) drop-shadow(0 0 8px rgba(251, 191, 36, 0.3));
+        filter: drop-shadow(0 0 4px #bd00ff) drop-shadow(0 0 8px rgba(189, 0, 255, 0.3));
       }
 
       /* Bar Load Animations */
       @keyframes load-bar-int {
         from { width: 0px; }
-        to { width: 50px; } /* !int_width */
+        to { width: 28px; } /* !int_width */
       }
       @keyframes load-bar-str {
         from { width: 0px; }
-        to { width: 72px; } /* !str_width */
+        to { width: 69px; } /* !str_width */
       }
       @keyframes load-bar-sen {
         from { width: 0px; }
-        to { width: 0px; } /* !sen_width */
+        to { width: 12px; } /* !sen_width */
       }
       @keyframes load-bar-agi {
         from { width: 0px; }
@@ -46,25 +43,21 @@
       }
       @keyframes load-bar-xp {
         from { width: 0px; }
-        to { width: 45px; } /* !xp_width */
+        to { width: 394px; } /* !xp_width */
       }
 
-      /* Scanner effect */
+      /* Scanning Line animation */
       @keyframes scan-animation {
         0% { transform: translateY(0); opacity: 0; }
-        10% { opacity: 0.7; }
-        90% { opacity: 0.7; }
-        100% { transform: translateY(374px); opacity: 0; }
+        5% { opacity: 0.8; }
+        95% { opacity: 0.8; }
+        100% { transform: translateY(370px); opacity: 0; }
       }
 
-      /* Pulsing animations */
-      @keyframes pulse-light {
-        0%, 100% { opacity: 0.5; }
+      /* Blinking corner dots */
+      @keyframes blink {
+        0%, 100% { opacity: 0.3; }
         50% { opacity: 1; }
-      }
-      @keyframes pulse-level {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.05); }
       }
 
       /* Classes */
@@ -75,15 +68,20 @@
       .bar-vit { animation: load-bar-vit 1.8s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
       .bar-xp { animation: load-bar-xp 2.2s cubic-bezier(0.1, 0.8, 0.2, 1) forwards; }
       
-      .scanner-line { animation: scan-animation 6s linear infinite; }
-      .pulse-item { animation: pulse-light 2s ease-in-out infinite; }
-      .pulse-lvl { animation: pulse-level 2s ease-in-out infinite; transform-origin: 75px 135px; }
+      .scanner-line { animation: scan-animation 7s linear infinite; }
+      .pulse-item { animation: blink 2s ease-in-out infinite; }
+      .pulse-lvl { animation: blink 3s ease-in-out infinite; }
     </style>
+
+    <!-- Background Grid -->
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#0e1322" stroke-width="0.8" />
+    </pattern>
 
     <!-- Gradients -->
     <linearGradient id="card-bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0a0d16" />
-      <stop offset="100%" stop-color="#111625" />
+      <stop offset="0%" stop-color="#04060c" />
+      <stop offset="100%" stop-color="#080c16" />
     </linearGradient>
 
     <linearGradient id="bar-gradient-int" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -91,46 +89,49 @@
       <stop offset="100%" stop-color="#06b6d4" />
     </linearGradient>
     <linearGradient id="bar-gradient-str" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#bfdbfe" />
-      <stop offset="100%" stop-color="#3b82f6" />
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
     </linearGradient>
     <linearGradient id="bar-gradient-sen" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="0%" stop-color="#f43f5e" />
       <stop offset="100%" stop-color="#d946ef" />
     </linearGradient>
     <linearGradient id="bar-gradient-agi" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fbbf24" />
-      <stop offset="100%" stop-color="#f59e0b" />
+      <stop offset="0%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#fb923c" />
     </linearGradient>
     <linearGradient id="bar-gradient-vit" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#34d399" />
-      <stop offset="100%" stop-color="#10b981" />
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
     </linearGradient>
     <linearGradient id="xp-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#8b5cf6" />
-      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#8b5cf6" />
       <stop offset="100%" stop-color="#3b82f6" />
     </linearGradient>
-    <linearGradient id="gold-text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#fbbf24" />
-      <stop offset="100%" stop-color="#f59e0b" />
-    </linearGradient>
 
-    <!-- Scanner Glow Filter -->
     <filter id="scan-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feGaussianBlur stdDeviation="3" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
   <!-- Card Body -->
-  <rect width="460" height="380" rx="12" fill="url(#card-bg)" stroke="#1f2937" stroke-width="1.5" />
+  <rect width="460" height="380" rx="2" fill="url(#card-bg)" stroke="#1e293b" stroke-width="1.5" />
+  <rect width="460" height="380" rx="0" fill="url(#grid)" />
   
-  <!-- Outer glowing border line -->
-  <rect x="5" y="5" width="450" height="370" rx="9" fill="none" stroke="#2563eb" stroke-width="1.2" opacity="0.3" />
+  <!-- Sharp Tech Borders -->
+  <rect x="6" y="6" width="448" height="368" fill="none" stroke="#1e293b" stroke-width="1" />
+  <rect x="9" y="9" width="442" height="362" fill="none" stroke="#334155" stroke-width="1" opacity="0.15" />
 
   <!-- Scanning HUD Line -->
-  <line x1="6" y1="6" x2="454" y2="6" stroke="#00f2fe" stroke-width="2" class="scanner-line" filter="url(#scan-glow)" />
+  <line x1="7" y1="7" x2="453" y2="7" stroke="#00f2fe" stroke-width="1.5" class="scanner-line" filter="url(#scan-glow)" />
+
+  <!-- Corner Blinking Dots -->
+  <circle cx="12" cy="12" r="1.5" fill="#00f2fe" class="pulse-item" />
+  <circle cx="448" cy="12" r="1.5" fill="#00f2fe" class="pulse-item" />
+  <circle cx="12" cy="368" r="1.5" fill="#00f2fe" class="pulse-item" />
+  <circle cx="448" cy="368" r="1.5" fill="#00f2fe" class="pulse-item" />
 
   <!-- Content Group -->
   <g class="status-card">
@@ -138,136 +139,136 @@
     <!-- Top Bar / Window Header -->
     <g transform="translate(20, 25)">
       <!-- System Title -->
-      <text x="0" y="15" font-size="18" font-weight="800" fill="#f1f5f9" letter-spacing="2">INFO: STATUS</text>
+      <text x="0" y="15" font-size="14" font-weight="800" fill="#f1f5f9" letter-spacing="3" class="mono-text">COMMAND CENTER // SYS_STATUS_ACTIVE</text>
       <!-- Subtitle -->
-      <text x="0" y="32" font-size="10" font-weight="600" fill="#00f2fe" class="mono-text" letter-spacing="1">THE SYSTEM: PROGRAMMER REGISTRY</text>
+      <text x="0" y="30" font-size="9" font-weight="600" fill="#00f2fe" class="mono-text" letter-spacing="1">LIVE SYNAPSE CONNECTIONS &amp; GITHUB LOGISTICS</text>
       
       <!-- Tech bracket corner -->
-      <path d="M 400 0 L 420 0 L 420 20" fill="none" stroke="#3b82f6" stroke-width="2" opacity="0.8" />
+      <path d="M 405 2 L 420 2 L 420 17" fill="none" stroke="#00f2fe" stroke-width="1.5" opacity="0.8" />
     </g>
 
     <!-- Divider Line -->
-    <line x1="20" y1="75" x2="440" y2="75" stroke="#1f2937" stroke-width="1" />
+    <line x1="20" y1="70" x2="440" y2="70" stroke="#1e293b" stroke-width="1" />
 
-    <!-- Left Section: Avatar / Emblem & Level -->
-    <g transform="translate(20, 90)">
-      <!-- Cyber Box for Avatar -->
-      <rect width="110" height="110" rx="8" fill="#0b0f19" stroke="#1e293b" stroke-width="1.5" />
-      <rect x="4" y="4" width="102" height="102" rx="6" fill="none" stroke="#2563eb" stroke-width="1" opacity="0.2" />
+    <!-- Left Section: Avatar Emblem & Level -->
+    <g transform="translate(20, 85)">
+      <!-- Cyber Box for Level Display -->
+      <rect width="110" height="110" fill="#060913" stroke="#1e293b" stroke-width="1.5" />
+      <polygon points="4,4 12,4 4,12" fill="#00f2fe" />
+      <polygon points="106,4 98,4 106,12" fill="#00f2fe" />
+      <polygon points="4,106 12,106 4,98" fill="#00f2fe" />
+      <polygon points="106,106 98,106 106,98" fill="#00f2fe" />
 
-      <!-- Glowing Cyber Crest/Portal Graphic inside Box -->
-      <g transform="translate(55, 45)" class="glow-neon-purple">
-        <!-- Magic Circle base -->
-        <circle cx="0" cy="0" r="28" fill="none" stroke="#a855f7" stroke-width="1" stroke-dasharray="4 4" class="pulse-item" />
-        <circle cx="0" cy="0" r="22" fill="none" stroke="#c084fc" stroke-width="1.5" />
-        <polygon points="0,-18 16,9 -16,9" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.4" />
-        <polygon points="0,18 16,-9 -16,-9" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.4" />
+      <!-- Glowing Hexagon Crest inside Box -->
+      <g transform="translate(55, 55)" class="glow-neon-purple">
+        <polygon points="0,-36 31,-18 31,18 0,36 -31,18 -31,-18" fill="none" stroke="#bd00ff" stroke-width="1" stroke-dasharray="2 2" />
+        <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="none" stroke="#bd00ff" stroke-width="1.5" opacity="0.6" />
       </g>
 
       <!-- Level Text inside Crest area -->
       <g class="pulse-lvl">
-        <text id="val-level" x="55" y="53" font-size="24" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-blue">36</text>
-        <text x="55" y="90" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="1.5">LEVEL</text>
+        <text id="val-level" x="55" y="60" font-size="28" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-blue">34</text>
+        <text x="55" y="93" font-size="8" font-weight="700" fill="#64748b" text-anchor="middle" letter-spacing="2">STAGE</text>
       </g>
     </g>
 
     <!-- Right Section: General Stats & Info -->
-    <g transform="translate(150, 90)">
+    <g transform="translate(150, 85)">
       <!-- Name -->
-      <text x="0" y="18" font-size="14" font-weight="500" fill="#64748b">NAME:</text>
-      <text x="65" y="18" font-size="15" font-weight="700" fill="#f8fafc">Anshul Sharma</text>
+      <text x="0" y="16" font-size="12" font-weight="600" fill="#475569">USER:</text>
+      <text x="75" y="16" font-size="14" font-weight="800" fill="#f1f5f9" letter-spacing="0.5">Anshul Sharma</text>
 
       <!-- Rank -->
-      <text x="0" y="36" font-size="14" font-weight="500" fill="#64748b">RANK:</text>
-      <text id="val-rank" x="65" y="38" font-size="16" font-weight="800" fill="#00f2fe" class="glow-neon-blue" letter-spacing="1">B-RANK (ELITE)</text>
+      <text x="0" y="34" font-size="12" font-weight="600" fill="#475569">GRADE:</text>
+      <text id="val-rank" x="75" y="34" font-size="13" font-weight="800" fill="#00f2fe" class="glow-neon-blue" letter-spacing="1">MID-II (PROGRAMMER)</text>
 
       <!-- Tier List -->
-      <text x="0" y="54" font-size="14" font-weight="500" fill="#64748b">TIERS:</text>
-      <text id="val-tiers" x="65" y="54" font-size="11" font-weight="600" fill="#94a3b8">E ➔ D ➔ C ➔ <tspan fill="#00f2fe" font-weight="800">[B]</tspan> ➔ A ➔ S (MAX)</text>
+      <text x="0" y="52" font-size="12" font-weight="600" fill="#475569">TIERS:</text>
+      <text id="val-tiers" x="75" y="52" font-size="10" font-weight="600" fill="#64748b">JUN-II ➔ JUN-I ➔ <tspan fill="#00f2fe" font-weight="800">[MID-II]</tspan> ➔ <tspan fill="#00f2fe" font-weight="800">[MID-I]</tspan> ➔ SEN ➔ PRIN</text>
 
       <!-- Class -->
-      <text x="0" y="72" font-size="14" font-weight="500" fill="#64748b">CLASS:</text>
-      <text id="val-class" x="65" y="72" font-size="14" font-weight="600" fill="#a855f7">Full-Stack Developer</text>
+      <text x="0" y="70" font-size="12" font-weight="600" fill="#475569">DESIGNATION:</text>
+      <text id="val-class" x="75" y="70" font-size="12" font-weight="600" fill="#bd00ff" class="glow-neon-purple">Full-Stack Developer</text>
 
       <!-- Special Guild/Affiliation -->
-      <text x="0" y="90" font-size="14" font-weight="500" fill="#64748b">GUILD:</text>
-      <text id="val-guild" x="65" y="90" font-size="14" font-weight="600" fill="#3b82f6">Cybercell Intelligence</text>
+      <text x="0" y="88" font-size="12" font-weight="600" fill="#475569">GUILD:</text>
+      <text id="val-guild" x="75" y="88" font-size="12" font-weight="600" fill="#3b82f6">Cybercell Intelligence</text>
 
       <!-- Status Indicator -->
-      <text x="0" y="108" font-size="14" font-weight="500" fill="#64748b">STATUS:</text>
-      <text id="val-status" x="65" y="108" font-size="12" font-weight="700" fill="#10b981" class="mono-text">[ ACTIVE / ARISE ]</text>
+      <text x="0" y="106" font-size="12" font-weight="600" fill="#475569">CORE_CORE:</text>
+      <text id="val-status" x="75" y="106" font-size="11" font-weight="700" fill="#10b981" class="mono-text">[ READY / OPERATIONAL ]</text>
     </g>
 
     <!-- Divider Line -->
-    <line x1="20" y1="215" x2="440" y2="215" stroke="#1f2937" stroke-width="1" />
+    <line x1="20" y1="210" x2="440" y2="210" stroke="#1e293b" stroke-width="1" />
 
     <!-- Bottom Section: Attributes & Progress Bars -->
-    <g transform="translate(20, 222)">
+    <g transform="translate(20, 216)">
       
-      <!-- Attribute 1: INT (PRs & Issues) -->
+      <!-- Attribute 1: INT -->
       <g transform="translate(0, 10)">
-        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">INT [PRs &amp; Issues]</text>
-        <text id="val-int" x="210" y="12" font-size="12" font-weight="700" fill="#00f2fe" class="mono-text">14</text>
+        <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">INT [PRs &amp; Issues]</text>
+        <text id="val-int" x="210" y="12" font-size="11" font-weight="700" fill="#00f2fe" class="mono-text">8</text>
         
         <!-- Bar BG -->
-        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
         <!-- Loading Bar -->
-        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-int)" class="bar-int" />
+        <rect x="231" y="4" height="6" rx="0" fill="url(#bar-gradient-int)" class="bar-int" />
       </g>
 
-      <!-- Attribute 2: STR (GitHub Commits) -->
-      <g transform="translate(0, 30)">
-        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">STR [GitHub Commits]</text>
-        <text id="val-str" x="210" y="12" font-size="12" font-weight="700" fill="#3b82f6" class="mono-text">200</text>
+      <!-- Attribute 2: STR -->
+      <g transform="translate(0, 28)">
+        <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">STR [GitHub Commits]</text>
+        <text id="val-str" x="210" y="12" font-size="11" font-weight="700" fill="#3b82f6" class="mono-text">192</text>
         
         <!-- Bar BG -->
-        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
         <!-- Loading Bar -->
-        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-str)" class="bar-str" />
+        <rect x="231" y="4" height="6" rx="0" fill="url(#bar-gradient-str)" class="bar-str" />
       </g>
 
-      <!-- Attribute 3: SEN (GitHub Stars) -->
-      <g transform="translate(0, 50)">
-        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">SEN [GitHub Stars]</text>
-        <text id="val-sen" x="210" y="12" font-size="12" font-weight="700" fill="#ec4899" class="mono-text">0</text>
+      <!-- Attribute 3: SEN -->
+      <g transform="translate(0, 46)">
+        <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">SEN [GitHub Stars]</text>
+        <text id="val-sen" x="210" y="12" font-size="11" font-weight="700" fill="#f43f5e" class="mono-text">2</text>
         
         <!-- Bar BG -->
-        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
         <!-- Loading Bar -->
-        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-sen)" class="bar-sen" />
+        <rect x="231" y="4" height="6" rx="0" fill="url(#bar-gradient-sen)" class="bar-sen" />
       </g>
 
-      <!-- Attribute 4: AGI (GitHub Repos) -->
-      <g transform="translate(0, 70)">
-        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">AGI [GitHub Repos]</text>
-        <text id="val-agi" x="210" y="12" font-size="12" font-weight="700" fill="#fbbf24" class="mono-text">20</text>
+      <!-- Attribute 4: AGI -->
+      <g transform="translate(0, 64)">
+        <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">AGI [GitHub Repos]</text>
+        <text id="val-agi" x="210" y="12" font-size="11" font-weight="700" fill="#eab308" class="mono-text">20</text>
         
         <!-- Bar BG -->
-        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
         <!-- Loading Bar -->
-        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-agi)" class="bar-agi" />
+        <rect x="231" y="4" height="6" rx="0" fill="url(#bar-gradient-agi)" class="bar-agi" />
       </g>
 
-      <!-- Attribute 5: VIT (GitHub Followers) -->
-      <g transform="translate(0, 90)">
-        <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">VIT [GitHub Followers]</text>
-        <text id="val-vit" x="210" y="12" font-size="12" font-weight="700" fill="#10b981" class="mono-text">6</text>
+      <!-- Attribute 5: VIT -->
+      <g transform="translate(0, 82)">
+        <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">VIT [GitHub Followers]</text>
+        <text id="val-vit" x="210" y="12" font-size="11" font-weight="700" fill="#10b981" class="mono-text">6</text>
         
         <!-- Bar BG -->
-        <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
+        <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
         <!-- Loading Bar -->
-        <rect x="231" y="3" height="8" rx="2" fill="url(#bar-gradient-vit)" class="bar-vit" />
+        <rect x="231" y="4" height="6" rx="0" fill="url(#bar-gradient-vit)" class="bar-vit" />
       </g>
 
       <!-- XP Section -->
-      <g transform="translate(0, 114)">
+      <g transform="translate(0, 105)">
         <!-- XP text -->
-        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#64748b" class="mono-text" letter-spacing="0.5">XP: 3,873 / 36,000 (10.76%)</text>
+        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#475569" class="mono-text" letter-spacing="0.5">XP: 31,970 / 34,000 (94.03%)</text>
         
         <!-- XP Bar BG -->
-        <rect x="0" y="15" width="420" height="6" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5" />
+        <rect x="0" y="15" width="420" height="5" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.5" />
         <!-- XP Bar Loading -->
-        <rect x="1" y="16" height="4" rx="1.5" fill="url(#xp-gradient)" class="bar-xp" />
+        <rect x="1" y="16" height="3" rx="0" fill="url(#xp-gradient)" class="bar-xp" />
       </g>
       
     </g>
