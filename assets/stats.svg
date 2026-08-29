@@ -27,7 +27,7 @@
       }
       @keyframes load-bar-str {
         from { width: 0px; }
-        to { width: 73px; } /* !str_width */
+        to { width: 72px; } /* !str_width */
       }
       @keyframes load-bar-sen {
         from { width: 0px; }
@@ -35,15 +35,15 @@
       }
       @keyframes load-bar-agi {
         from { width: 0px; }
-        to { width: 90px; } /* !agi_width */
+        to { width: 85px; } /* !agi_width */
       }
       @keyframes load-bar-vit {
         from { width: 0px; }
-        to { width: 36px; } /* !vit_width */
+        to { width: 42px; } /* !vit_width */
       }
       @keyframes load-bar-xp {
         from { width: 0px; }
-        to { width: 147px; } /* !xp_width */
+        to { width: 45px; } /* !xp_width */
       }
 
       /* Scanning Line animation */
@@ -219,7 +219,7 @@
       <!-- Attribute 2: STR -->
       <g transform="translate(0, 28)">
         <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">STR [GitHub Commits]</text>
-        <text id="val-str" x="210" y="12" font-size="11" font-weight="700" fill="#3b82f6" class="mono-text">203</text>
+        <text id="val-str" x="210" y="12" font-size="11" font-weight="700" fill="#3b82f6" class="mono-text">200</text>
         
         <!-- Bar BG -->
         <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
@@ -241,7 +241,7 @@
       <!-- Attribute 4: AGI -->
       <g transform="translate(0, 64)">
         <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">AGI [GitHub Repos]</text>
-        <text id="val-agi" x="210" y="12" font-size="11" font-weight="700" fill="#eab308" class="mono-text">20</text>
+        <text id="val-agi" x="210" y="12" font-size="11" font-weight="700" fill="#eab308" class="mono-text">19</text>
         
         <!-- Bar BG -->
         <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
@@ -252,7 +252,7 @@
       <!-- Attribute 5: VIT -->
       <g transform="translate(0, 82)">
         <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">VIT [GitHub Followers]</text>
-        <text id="val-vit" x="210" y="12" font-size="11" font-weight="700" fill="#10b981" class="mono-text">6</text>
+        <text id="val-vit" x="210" y="12" font-size="11" font-weight="700" fill="#10b981" class="mono-text">7</text>
         
         <!-- Bar BG -->
         <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
@@ -263,7 +263,7 @@
       <!-- XP Section -->
       <g transform="translate(0, 105)">
         <!-- XP text -->
-        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#475569" class="mono-text" letter-spacing="0.5">XP: 12,635 / 36,000 (35.10%)</text>
+        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#475569" class="mono-text" letter-spacing="0.5">XP: 3,873 / 36,000 (10.76%)</text>
         
         <!-- XP Bar BG -->
         <rect x="0" y="15" width="420" height="5" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.5" />
