@@ -26,15 +26,15 @@
       /* Bar Load Animations */
       @keyframes load-bar-int {
         from { width: 0px; }
-        to { width: 28px; } /* !int_width */
+        to { width: 50px; } /* !int_width */
       }
       @keyframes load-bar-str {
         from { width: 0px; }
-        to { width: 69px; } /* !str_width */
+        to { width: 71px; } /* !str_width */
       }
       @keyframes load-bar-sen {
         from { width: 0px; }
-        to { width: 12px; } /* !sen_width */
+        to { width: 0px; } /* !sen_width */
       }
       @keyframes load-bar-agi {
         from { width: 0px; }
@@ -46,7 +46,7 @@
       }
       @keyframes load-bar-xp {
         from { width: 0px; }
-        to { width: 394px; } /* !xp_width */
+        to { width: 11px; } /* !xp_width */
       }
 
       /* Scanner effect */
@@ -166,7 +166,7 @@
 
       <!-- Level Text inside Crest area -->
       <g class="pulse-lvl">
-        <text id="val-level" x="55" y="53" font-size="24" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-blue">34</text>
+        <text id="val-level" x="55" y="53" font-size="24" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-blue">36</text>
         <text x="55" y="90" font-size="10" font-weight="700" fill="#94a3b8" text-anchor="middle" letter-spacing="1.5">LEVEL</text>
       </g>
     </g>
@@ -179,11 +179,11 @@
 
       <!-- Rank -->
       <text x="0" y="36" font-size="14" font-weight="500" fill="#64748b">RANK:</text>
-      <text id="val-rank" x="65" y="38" font-size="16" font-weight="800" fill="#00f2fe" class="glow-neon-blue" letter-spacing="1">C-RANK (MID-TIER)</text>
+      <text id="val-rank" x="65" y="38" font-size="16" font-weight="800" fill="#00f2fe" class="glow-neon-blue" letter-spacing="1">B-RANK (ELITE)</text>
 
       <!-- Tier List -->
       <text x="0" y="54" font-size="14" font-weight="500" fill="#64748b">TIERS:</text>
-      <text id="val-tiers" x="65" y="54" font-size="11" font-weight="600" fill="#94a3b8">E ➔ D ➔ <tspan fill="#00f2fe" font-weight="800">[C]</tspan> ➔ B ➔ A ➔ S (MAX)</text>
+      <text id="val-tiers" x="65" y="54" font-size="11" font-weight="600" fill="#94a3b8">E ➔ D ➔ C ➔ <tspan fill="#00f2fe" font-weight="800">[B]</tspan> ➔ A ➔ S (MAX)</text>
 
       <!-- Class -->
       <text x="0" y="72" font-size="14" font-weight="500" fill="#64748b">CLASS:</text>
@@ -207,7 +207,7 @@
       <!-- Attribute 1: INT (PRs & Issues) -->
       <g transform="translate(0, 10)">
         <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">INT [PRs &amp; Issues]</text>
-        <text id="val-int" x="210" y="12" font-size="12" font-weight="700" fill="#00f2fe" class="mono-text">8</text>
+        <text id="val-int" x="210" y="12" font-size="12" font-weight="700" fill="#00f2fe" class="mono-text">14</text>
         
         <!-- Bar BG -->
         <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
@@ -218,7 +218,7 @@
       <!-- Attribute 2: STR (GitHub Commits) -->
       <g transform="translate(0, 30)">
         <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">STR [GitHub Commits]</text>
-        <text id="val-str" x="210" y="12" font-size="12" font-weight="700" fill="#3b82f6" class="mono-text">192</text>
+        <text id="val-str" x="210" y="12" font-size="12" font-weight="700" fill="#3b82f6" class="mono-text">199</text>
         
         <!-- Bar BG -->
         <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
@@ -229,7 +229,7 @@
       <!-- Attribute 3: SEN (GitHub Stars) -->
       <g transform="translate(0, 50)">
         <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">SEN [GitHub Stars]</text>
-        <text id="val-sen" x="210" y="12" font-size="12" font-weight="700" fill="#ec4899" class="mono-text">2</text>
+        <text id="val-sen" x="210" y="12" font-size="12" font-weight="700" fill="#ec4899" class="mono-text">0</text>
         
         <!-- Bar BG -->
         <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
@@ -262,7 +262,7 @@
       <!-- XP Section -->
       <g transform="translate(0, 114)">
         <!-- XP text -->
-        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#64748b" class="mono-text" letter-spacing="0.5">XP: 31,970 / 34,000 (94.03%)</text>
+        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#64748b" class="mono-text" letter-spacing="0.5">XP: 953 / 36,000 (2.65%)</text>
         
         <!-- XP Bar BG -->
         <rect x="0" y="15" width="420" height="6" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5" />
