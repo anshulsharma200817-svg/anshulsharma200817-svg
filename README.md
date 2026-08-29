@@ -7,11 +7,11 @@
 <br />
 
 ## 🌌 Welcome, Programmer!
-I am **Anshul Sharma**, a C-Rank software developer and machine learning practitioner. 
+I am **Anshul Sharma**, a Mid-Level (MID-II grade) software developer and machine learning practitioner. 
 I specialize in building intelligent applications, starting from custom machine learning classification pipelines 
 and metaheuristic optimizers to scalable, microservices-driven study planners and robust security analysis platforms.
 
-*(Rank Progression: E ➔ D ➔ **[C]** ➔ B ➔ A ➔ S. Higher stats unlock higher ranks!)*
+*(Rank Progression: JUN-II ➔ JUN-I ➔ **[MID-II]** ➔ MID-I ➔ SEN ➔ PRIN. Higher stats unlock higher ranks!)*
 
 I thrive on taking complex engineering challenges (like building secure, compliant intelligence software for law enforcement) 
 and distilling them into robust, clean, and highly user-friendly digital systems.
