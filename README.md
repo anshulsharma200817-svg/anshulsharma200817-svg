@@ -239,11 +239,15 @@ graph TD
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
       <td align="center" valign="middle">
-        <img src="https://github-readme-stats.vercel.app/api?username=anshulsharma200817-svg&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Anshul's GitHub Stats" height="150" />
+        <a href="https://github.com/anshulsharma200817-svg">
+          <img src="https://github-stats-extended.vercel.app/api?username=anshulsharma200817-svg&amp;show_icons=true&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117" alt="Anshul's GitHub Stats" height="150" />
+        </a>
       </td>
       <td width="20"></td>
       <td align="center" valign="middle">
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anshulsharma200817-svg&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117" alt="Anshul's Top Languages" height="150" />
+        <a href="https://github.com/anshulsharma200817-svg?tab=repositories">
+          <img src="https://github-stats-extended.vercel.app/api/top-langs?username=anshulsharma200817-svg&amp;layout=compact&amp;theme=tokyonight&amp;hide_border=true&amp;bg_color=0D1117" alt="Anshul's Top Languages" height="150" />
+        </a>
       </td>
     </tr>
   </table>
