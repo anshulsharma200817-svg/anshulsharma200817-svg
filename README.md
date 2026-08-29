@@ -9,7 +9,7 @@
 ## 🌌 Welcome, Programmer!
 I am **Anshul Sharma**, a C-Rank software developer and machine learning practitioner. 
 I specialize in building intelligent applications, starting from custom machine learning classification pipelines 
-and metaheuristic optimizers to immersive, gamified discipline platforms and comprehensive Astro-based engineering applications.
+and metaheuristic optimizers to scalable, microservices-driven study planners and robust security analysis platforms.
 
 *(Rank Progression: E ➔ D ➔ **[C]** ➔ B ➔ A ➔ S. Higher stats unlock higher ranks!)*
 
@@ -19,7 +19,7 @@ and distilling them into robust, clean, and highly user-friendly digital systems
 #### 🎯 Current Active Quests:
 * 🛡️ **Threat Detection:** Advancing real-time NLP classification models for dark-social analysis.
 * ⚡ **Performance Tuning:** Optimizing relational database architectures and background workers.
-* 🎨 **Creative Interfaces:** Designing micro-animations and browser audio synthesizers (Web Audio API).
+* 🎨 **Creative Interfaces:** Designing micro-animations and custom SVG dashboards for profile gamification.
 
 <br />
 
@@ -109,11 +109,7 @@ graph TD
     style Dossier fill:#111827,stroke:#64748b,stroke-width:2px,color:#f8fafc
 ```
 
-### ▓ THE SYSTEM — RPG Discipline Tracker
-> **Theme:** Solo Leveling RPG Gamification Dashboard
-* **Description:** A gamified habit and productivity engine designed to translate daily tasks into S-Rank quests, awarding XP, level ups, and medals.
-* **Core Technology:** FastAPI backend, SQLite, Vanilla HTML/CSS/JS frontend, Web Audio API.
-* **Key Achievement:** Synthesizes low-rumble audio overlays using browser sound oscillators on boot. Features streaks, bosses, character stats progression, and scheduled SQLite backups.
+
 
 ### 📊 AMO-HO (CardioInsight) — Feature Selection Optimization
 > **Field:** Machine Learning Research & Healthcare
