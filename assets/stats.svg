@@ -30,7 +30,7 @@
       }
       @keyframes load-bar-str {
         from { width: 0px; }
-        to { width: 71px; } /* !str_width */
+        to { width: 72px; } /* !str_width */
       }
       @keyframes load-bar-sen {
         from { width: 0px; }
@@ -46,7 +46,7 @@
       }
       @keyframes load-bar-xp {
         from { width: 0px; }
-        to { width: 11px; } /* !xp_width */
+        to { width: 45px; } /* !xp_width */
       }
 
       /* Scanner effect */
@@ -218,7 +218,7 @@
       <!-- Attribute 2: STR (GitHub Commits) -->
       <g transform="translate(0, 30)">
         <text x="0" y="12" font-size="12" font-weight="700" fill="#f1f5f9" letter-spacing="1">STR [GitHub Commits]</text>
-        <text id="val-str" x="210" y="12" font-size="12" font-weight="700" fill="#3b82f6" class="mono-text">199</text>
+        <text id="val-str" x="210" y="12" font-size="12" font-weight="700" fill="#3b82f6" class="mono-text">200</text>
         
         <!-- Bar BG -->
         <rect x="230" y="2" width="180" height="10" rx="3" fill="#111827" stroke="#1e293b" stroke-width="0.8" />
@@ -262,7 +262,7 @@
       <!-- XP Section -->
       <g transform="translate(0, 114)">
         <!-- XP text -->
-        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#64748b" class="mono-text" letter-spacing="0.5">XP: 953 / 36,000 (2.65%)</text>
+        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#64748b" class="mono-text" letter-spacing="0.5">XP: 3,873 / 36,000 (10.76%)</text>
         
         <!-- XP Bar BG -->
         <rect x="0" y="15" width="420" height="6" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5" />
