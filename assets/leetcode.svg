@@ -201,7 +201,7 @@
         <g class="pulse-core">
           <text x="60" y="49" text-anchor="middle">
             <tspan id="lc-solved" font-size="20" font-weight="800" fill="#f1f5f9">86</tspan>
-            <tspan id="lc-total" font-size="10" font-weight="500" fill="#475569">/4041</tspan>
+            <tspan id="lc-total" font-size="10" font-weight="500" fill="#475569">/4042</tspan>
           </text>
           <text x="60" y="63" font-size="9" font-weight="500" fill="#475569" text-anchor="middle" letter-spacing="1">SOLVED</text>
           <text id="lc-attempting" x="60" y="79" font-size="7" font-weight="700" fill="#10b981" text-anchor="middle" class="mono-text">3 Active</text>
@@ -231,7 +231,7 @@
           <rect x="0" y="0" width="280" height="28" fill="#05070f" stroke="#1e293b" stroke-width="1" />
           <rect x="0" y="0" width="4" height="28" fill="#f43f5e" />
           <text x="15" y="18" font-size="11" font-weight="700" fill="#f43f5e" class="glow-neon-rose">Hard</text>
-          <text id="lc-hard-count" x="265" y="18" font-size="11" font-weight="700" fill="#f1f5f9" class="mono-text" text-anchor="end">3 <tspan fill="#475569" font-size="10">/ 970</tspan></text>
+          <text id="lc-hard-count" x="265" y="18" font-size="11" font-weight="700" fill="#f1f5f9" class="mono-text" text-anchor="end">3 <tspan fill="#475569" font-size="10">/ 971</tspan></text>
         </g>
       </g>
       
