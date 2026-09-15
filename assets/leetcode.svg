@@ -162,7 +162,7 @@
 
       <!-- Global Rank -->
       <text x="0" y="36" font-size="12" font-weight="600" fill="#475569">RANK:</text>
-      <text id="lc-rank" x="75" y="36" font-size="13" font-weight="700" fill="#f1f5f9" class="mono-text">#1,872,164</text>
+      <text id="lc-rank" x="75" y="36" font-size="13" font-weight="700" fill="#f1f5f9" class="mono-text">#1,873,335</text>
 
       <!-- Combat Class based on stats -->
       <text x="0" y="56" font-size="12" font-weight="600" fill="#475569">SOLVER:</text>
