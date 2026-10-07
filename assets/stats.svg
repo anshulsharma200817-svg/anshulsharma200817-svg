@@ -27,7 +27,7 @@
       }
       @keyframes load-bar-str {
         from { width: 0px; }
-        to { width: 73px; } /* !str_width */
+        to { width: 74px; } /* !str_width */
       }
       @keyframes load-bar-sen {
         from { width: 0px; }
@@ -35,7 +35,7 @@
       }
       @keyframes load-bar-agi {
         from { width: 0px; }
-        to { width: 103px; } /* !agi_width */
+        to { width: 108px; } /* !agi_width */
       }
       @keyframes load-bar-vit {
         from { width: 0px; }
@@ -43,7 +43,7 @@
       }
       @keyframes load-bar-xp {
         from { width: 0px; }
-        to { width: 215px; } /* !xp_width */
+        to { width: 249px; } /* !xp_width */
       }
 
       /* Scanning Line animation */
@@ -219,7 +219,7 @@
       <!-- Attribute 2: STR -->
       <g transform="translate(0, 28)">
         <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">STR [GitHub Commits]</text>
-        <text id="val-str" x="210" y="12" font-size="11" font-weight="700" fill="#3b82f6" class="mono-text">205</text>
+        <text id="val-str" x="210" y="12" font-size="11" font-weight="700" fill="#3b82f6" class="mono-text">206</text>
         
         <!-- Bar BG -->
         <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
@@ -241,7 +241,7 @@
       <!-- Attribute 4: AGI -->
       <g transform="translate(0, 64)">
         <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">AGI [GitHub Repos]</text>
-        <text id="val-agi" x="210" y="12" font-size="11" font-weight="700" fill="#eab308" class="mono-text">23</text>
+        <text id="val-agi" x="210" y="12" font-size="11" font-weight="700" fill="#eab308" class="mono-text">24</text>
         
         <!-- Bar BG -->
         <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
@@ -263,7 +263,7 @@
       <!-- XP Section -->
       <g transform="translate(0, 105)">
         <!-- XP text -->
-        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#475569" class="mono-text" letter-spacing="0.5">XP: 18,476 / 36,000 (51.32%)</text>
+        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#475569" class="mono-text" letter-spacing="0.5">XP: 21,397 / 36,000 (59.44%)</text>
         
         <!-- XP Bar BG -->
         <rect x="0" y="15" width="420" height="5" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.5" />
