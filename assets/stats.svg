@@ -27,7 +27,7 @@
       }
       @keyframes load-bar-str {
         from { width: 0px; }
-        to { width: 82px; } /* !str_width */
+        to { width: 84px; } /* !str_width */
       }
       @keyframes load-bar-sen {
         from { width: 0px; }
@@ -43,7 +43,7 @@
       }
       @keyframes load-bar-xp {
         from { width: 0px; }
-        to { width: 365px; } /* !xp_width */
+        to { width: 72px; } /* !xp_width */
       }
 
       /* Scanning Line animation */
@@ -167,7 +167,7 @@
 
       <!-- Level Text inside Crest area -->
       <g class="pulse-lvl">
-        <text id="val-level" x="55" y="60" font-size="28" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-blue">38</text>
+        <text id="val-level" x="55" y="60" font-size="28" font-weight="800" fill="#f1f5f9" text-anchor="middle" class="glow-neon-blue">39</text>
         <text x="55" y="93" font-size="8" font-weight="700" fill="#64748b" text-anchor="middle" letter-spacing="2">STAGE</text>
       </g>
     </g>
@@ -219,7 +219,7 @@
       <!-- Attribute 2: STR -->
       <g transform="translate(0, 28)">
         <text x="0" y="12" font-size="11" font-weight="700" fill="#94a3b8" letter-spacing="1">STR [GitHub Commits]</text>
-        <text id="val-str" x="210" y="12" font-size="11" font-weight="700" fill="#3b82f6" class="mono-text">230</text>
+        <text id="val-str" x="210" y="12" font-size="11" font-weight="700" fill="#3b82f6" class="mono-text">234</text>
         
         <!-- Bar BG -->
         <rect x="230" y="3" width="180" height="8" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.8" />
@@ -263,7 +263,7 @@
       <!-- XP Section -->
       <g transform="translate(0, 105)">
         <!-- XP text -->
-        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#475569" class="mono-text" letter-spacing="0.5">XP: 33,054 / 38,000 (86.99%)</text>
+        <text id="val-xp-text" x="0" y="11" font-size="9" font-weight="700" fill="#475569" class="mono-text" letter-spacing="0.5">XP: 6,726 / 39,000 (17.25%)</text>
         
         <!-- XP Bar BG -->
         <rect x="0" y="15" width="420" height="5" rx="0" fill="#05070f" stroke="#1e293b" stroke-width="0.5" />
